@@ -16,10 +16,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable();
         http.authorizeRequests().
                 antMatchers("/").permitAll();
+        http.authorizeRequests().
+                antMatchers("/audit", "/history").access
+                ("hasAnyRole('ROLE_ADMIN')");
         http.authorizeRequests().and().formLogin()
                 .loginProcessingUrl("/j_spring_security_check")
-                .loginPage("/login")//
-                .defaultSuccessUrl("/productPage")
+                .loginPage("/login")
+                .defaultSuccessUrl("/")
                 .failureUrl("/login?error=true")
                 .usernameParameter("username")
                 .passwordParameter("password")
