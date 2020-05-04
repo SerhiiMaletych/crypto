@@ -16,13 +16,21 @@ public class UkrainianEnglishCodecTest {
     @Test
     public void testEncode() {
         String expected = "будинок";
+        String expected1 = "будувати";
+        String expected2 = "високий";
         assertEquals(ukr.encode("house"), expected);
+        assertEquals(ukr.encode("build"), expected1);
+        assertEquals(ukr.encode("high"), expected2);
     }
 
     @Test
     public void testDecode() {
         String expected = "house";
+        String expected1 = "build";
+        String expected2 = "high";
         assertEquals(ukr.decode("будинок"), expected);
+        assertEquals(ukr.decode("будувати"), expected1);
+        assertEquals(ukr.decode("високий"), expected2);
     }
 
     @Test

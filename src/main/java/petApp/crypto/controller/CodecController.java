@@ -22,4 +22,8 @@ public class CodecController {
     public String VigenereOverCaesarController(){
         return "coders/vigenereOverCaesar";
     }
+    @RequestMapping(value = "/ukrEng", method = RequestMethod.GET)
+    public String UkrEngController(){
+        return "coders/ukrEng";
+    }
 }
