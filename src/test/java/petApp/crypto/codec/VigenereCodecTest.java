@@ -1,36 +1,40 @@
-package petApp.crypto;
-
+package petApp.crypto.codec;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import petApp.crypto.coders.VigenereOverCaesar;
+import petApp.crypto.coders.VigenereCodec;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
-public class VigenereOverCaesarTest {
+public class VigenereCodecTest {
     @Autowired
-    VigenereOverCaesar vigenereOverCaesar;
+    VigenereCodec vigenereCodec;
+
     @Test
     public void testEncode() {
-        String expected = "kiopr";
-        assertEquals(vigenereOverCaesar.encode("hello"), expected);
+        String expected = "igmnp";
+        assertEquals(vigenereCodec.encode("hello"), expected);
+
     }
 
     @Test
     public void testDecode() {
         String expected = "hello";
-        assertEquals(vigenereOverCaesar.decode("kiopr"), expected);
+        assertEquals(vigenereCodec.decode("igmnp"), expected);
     }
+
     @Test
     public void testEncodeMultipleWords() {
-        String expected = "kioprdzsupg";
-        assertEquals(vigenereOverCaesar.encode("hello world"), expected);
+        String expected = "igmnpbxqsne";
+        assertEquals(vigenereCodec.encode("hello world"), expected);
+
     }
+
     @Test
     public void testDecodeMultipleWords() {
         String expected = "hello world";
-        assertEquals(vigenereOverCaesar.decode("kioprdzsupg"), expected);
+        assertEquals(vigenereCodec.decode("igmnpbxqsne"), expected);
     }
 }

@@ -1,4 +1,4 @@
-package petApp.crypto;
+package petApp.crypto.codec;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
