@@ -15,7 +15,8 @@ class DataForUkrEng {
     static Map<String, String> ukrToEngDictionary = new HashMap<>();
     private Properties propertyFile = new Properties();
 
-    private Map<String, String> setPropertyToMap(InputStream ip, Map<String, String> engToUkrDictionary) throws IOException {
+    private Map<String, String> setPropertyToMap(InputStream ip, Map<String, String> engToUkrDictionary)
+            throws IOException {
         propertyFile.load(ip);
         Set<Object> keys = propertyFile.keySet();
 

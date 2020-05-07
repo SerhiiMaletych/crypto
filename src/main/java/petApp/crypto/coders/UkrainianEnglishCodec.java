@@ -7,12 +7,6 @@ import java.util.stream.Collectors;
 
 @Component
 public class UkrainianEnglishCodec implements Decoder, Encoder {
-    private DataForUkrEng ukrEngCodec;
-
-    {
-        ukrEngCodec = new DataForUkrEng();
-    }
-
 
     @Override
     public String encode(String input) {
@@ -31,11 +25,4 @@ public class UkrainianEnglishCodec implements Decoder, Encoder {
     }
 
 
-    public DataForUkrEng getUkrEngCodec() {
-        return ukrEngCodec;
-    }
-
-    public void setUkrEngCodec(DataForUkrEng ukrEngCodec) {
-        this.ukrEngCodec = ukrEngCodec;
-    }
 }
