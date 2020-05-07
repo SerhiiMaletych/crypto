@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-public class CodecController {
+public class CodecTemplateController {
     @RequestMapping(value = "/caesar", method = RequestMethod.GET)
     public String CaesarController(){
         return "coders/caesar";
