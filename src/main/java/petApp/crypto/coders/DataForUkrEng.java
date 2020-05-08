@@ -43,18 +43,18 @@ class DataForUkrEng {
         return setPropertyToMap(ip, ukrToEngDictionary);
     }
 
-    DataForUkrEng() {
-
-        try {
-            putDecode();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        try {
-            putEncode();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//    DataForUkrEng() {
+//
+//        try {
+//            putDecode();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        try {
+//            putEncode();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
     }
-}
+
