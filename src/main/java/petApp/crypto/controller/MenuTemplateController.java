@@ -25,4 +25,6 @@ public class MenuTemplateController {
         return "menu/analyticsMenu";
     }
 
+
+
 }

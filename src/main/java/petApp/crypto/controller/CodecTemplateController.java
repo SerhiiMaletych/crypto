@@ -7,23 +7,34 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class CodecTemplateController {
     @RequestMapping(value = "/caesar", method = RequestMethod.GET)
-    public String CaesarController(){
+    public String CaesarController() {
         return "coders/caesar";
     }
+
     @RequestMapping(value = "/morse", method = RequestMethod.GET)
-    public String MorseController(){
+    public String MorseController() {
         return "coders/morse";
     }
+
     @RequestMapping(value = "/vigenere", method = RequestMethod.GET)
-    public String VigenereController(){
+    public String VigenereController() {
         return "coders/vigenere";
     }
+
     @RequestMapping(value = "/vigenereOverCaesar", method = RequestMethod.GET)
-    public String VigenereOverCaesarController(){
+    public String VigenereOverCaesarController() {
         return "coders/vigenereOverCaesar";
     }
+
     @RequestMapping(value = "/ukrEng", method = RequestMethod.GET)
-    public String UkrEngController(){
+    public String UkrEngController() {
         return "coders/ukrEng";
     }
+
+    @RequestMapping(value = "userInput", method = RequestMethod.GET)
+    public String translationInput() {
+        return "menu/userInput";
+
+    }
+
 }
