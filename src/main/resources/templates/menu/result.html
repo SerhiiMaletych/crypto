@@ -1,12 +1,14 @@
 <!DOCTYPE HTML>
 <html xmlns:th="https://www.thymeleaf.org">
     <head>
-        <title>Getting Started: Handling Form Submission</title>
+        <title>Result</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     </head>
     <body>
         <h1>Result</h1>
-        <p th:text="'content: ' + ${userInput.input}" />
-        <a href="/userInput">Submit another message</a>
+        <p th:text="'Your input: ' + ${userInput.input}" />
+        <h4>Translated text:</h4>
+
+        <a href="/">another operation</a>
     </body>
 </html>

@@ -1,5 +1,7 @@
 package petApp.crypto.model;
 
+
+
 public class UserInput {
     private long id;
     private String input;
