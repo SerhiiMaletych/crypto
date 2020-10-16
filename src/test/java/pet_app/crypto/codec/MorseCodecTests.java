@@ -3,7 +3,7 @@ package pet_app.crypto.codec;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import pet_app.crypto.coders.MorseCodec;
+import pet_app.crypto.coderService.MorseCodec;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

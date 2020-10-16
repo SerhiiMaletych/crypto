@@ -1,4 +1,4 @@
-package pet_app.crypto.coders;
+package pet_app.crypto.coderService;
 
 import org.springframework.stereotype.Service;
 
