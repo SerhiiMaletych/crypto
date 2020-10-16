@@ -1,14 +1,27 @@
 package pet_app.crypto.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+@Entity
 public class AppUser {
 
-
+    @Id
     private Integer id;
 
     private String name;
 
     private String password;
+
+    public AppUser(Integer id, String name, String password) {
+        this.id = id;
+        this.name = name;
+        this.password = password;
+    }
+
+    public AppUser() {
+
+    }
 
 
     public Integer getId() {

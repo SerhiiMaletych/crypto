@@ -1,20 +1,31 @@
 package pet_app.crypto.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
-import javax.persistence.*;
-
-
+@Entity
 public class History {
 
+    @Id
     private long id;
-
     private String codec;
-
     private String userInput;
-
     private String translated;
-
     private String date;
+
+    public History() {
+
+    }
+
+    public History(long id, String codec, String userInput, String translated, String date) {
+        this.id = id;
+        this.codec = codec;
+        this.userInput = userInput;
+        this.translated = translated;
+        this.date = date;
+    }
+
+
 
     public long getId() {
         return id;
