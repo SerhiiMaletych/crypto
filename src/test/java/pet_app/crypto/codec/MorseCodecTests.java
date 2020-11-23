@@ -1,39 +1,44 @@
-//package pet_app.crypto.codec;
-//
-//import org.junit.jupiter.api.Test;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.boot.test.context.SpringBootTest;
-//import pet_app.crypto.coderService.MorseCodec;
-//
-//import static org.junit.jupiter.api.Assertions.assertEquals;
-//
-//@SpringBootTest
-//public class MorseCodecTests {
-//
-//    @Autowired
-//    MorseCodec morseCodec;
-//
-//    @Test
-//    public void testEncode() {
-//        String expected = "..../ ./ .-../ .-../ ---/";
-//        assertEquals(morseCodec.encode("hello"), expected);
-//    }
-//
-//    @Test
-//    public void testDecode() {
-//        String expected = "hello";
-//        assertEquals(morseCodec.decode("..../ ./ .-../ .-../ ---/"), expected);
-//    }
-//
-//    @Test
-//    public void testEncodeMultipleWords() {
-//        String expected = "..../ ./ .-../ .-../ ---/ ......./ .--/ ---/ .-./ .-../ -../";
-//        assertEquals(morseCodec.encode("hello world"), expected);
-//    }
-//
-//    @Test
-//    public void testDecodeMultipleWords() {
-//        String expected = "hello world";
-//        assertEquals(morseCodec.decode("..../ ./ .-../ .-../ ---/ ......./ .--/ ---/ .-./ .-../ -../"), expected);
-//    }
-//}
+package pet_app.crypto.codec;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import pet_app.crypto.coderService.MorseCodec;
+import pet_app.crypto.model.Input;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+@SpringBootTest
+public class MorseCodecTests {
+
+    @Autowired
+    MorseCodec morseCodec;
+
+    @Test
+    public void testEncode() {
+        Input input = new Input("hello");
+        String expected = "..../ ./ .-../ .-../ ---/";
+        assertEquals(morseCodec.encode(input), expected);
+    }
+
+    @Test
+    public void testDecode() {
+        Input input = new Input("..../ ./ .-../ .-../ ---/");
+        String expected = "hello";
+        assertEquals(morseCodec.decode(input), expected);
+    }
+
+    @Test
+    public void testEncodeMultipleWords() {
+        Input input = new Input("hello world");
+        String expected = "..../ ./ .-../ .-../ ---/ ......./ .--/ ---/ .-./ .-../ -../";
+        assertEquals(morseCodec.encode(input), expected);
+    }
+
+    @Test
+    public void testDecodeMultipleWords() {
+        Input input = new Input("..../ ./ .-../ .-../ ---/ ......./ .--/ ---/ .-./ .-../ -../");
+        String expected = "hello world";
+        assertEquals(morseCodec.decode(input), expected);
+    }
+}
