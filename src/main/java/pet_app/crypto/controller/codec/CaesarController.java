@@ -29,13 +29,13 @@ public class CaesarController {
 
     @PostMapping(value = "/caesar", params = "encode")
     public String encode(@ModelAttribute("operation") Input input, Model model) {
-        model.addAttribute("result", codec.encode(input));
+        model.addAttribute("resultEncode", codec.encode(input));
         return "coder/caesar";
     }
 
     @PostMapping(value = "/caesar", params = "decode")
     public String decode(@ModelAttribute("operation") Input input, Model model) {
-        model.addAttribute("result", codec.decode(input));
+        model.addAttribute("resultDecode", codec.decode(input));
         return "coder/caesar";
     }
 }

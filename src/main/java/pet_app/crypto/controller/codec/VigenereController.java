@@ -27,13 +27,13 @@ public class VigenereController {
 
     @PostMapping(value = "/vigenere", params = "encode")
     public String encode(@ModelAttribute("operation") Input input, Model model) {
-        model.addAttribute("result", codec.encode(input));
+        model.addAttribute("resultEncode", codec.encode(input));
         return "coder/vigenere";
     }
 
     @PostMapping(value = "/vigenere", params = "decode")
     public String decode(@ModelAttribute("operation") Input input, Model model) {
-        model.addAttribute("result", codec.decode(input));
+        model.addAttribute("resultDecode", codec.decode(input));
         return "coder/vigenere";
     }
 }

@@ -16,16 +16,18 @@ public class Input {
 
     @Id
     private long id;
+    private String input2;
+
 
     public Input(String input) {
-        this.input = input;
+        this.input2 = input;
     }
 
-    private String input;
+
 
     public Input(long id, String input) {
         this.id = id;
-        this.input = input;
+        this.input2 = input;
     }
 
     public Input() {
@@ -42,11 +44,11 @@ public class Input {
     }
 
     public String getInput() {
-        return input;
+        return input2;
     }
 
     public void setInput(String input) {
-        this.input = input;
+        this.input2 = input;
     }
 
 

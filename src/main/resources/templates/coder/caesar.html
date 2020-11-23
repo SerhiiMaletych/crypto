@@ -14,15 +14,19 @@
 
         <input class="user-input" type="text" th:field="*{input}"/>
 
-        <input type="submit" class="button" name="encode" value="+"/>
+        <input type="submit" class="button" name="encode" value="Encode"/>
 
         <input class="user-input" type="text" th:field="*{input}"/>
 
-        <input type="submit" class="button" name="decode" value="+"/>
+        <input type="submit" class="button" name="decode" value="Decode"/>
 
 
-        <p class="result resultText" th:text="'Result: '"></p>
-        <p class="result" th:text=" ${result}"></p>
+        <p class="result resultText" th:text="'Result for encode: '"></p>
+        <p class="result" th:text=" ${resultEncode}"></p>
+
+        <p class="result resultText" th:text="'Result for decode: '"></p>
+        <p class="result" th:text=" ${resultDecode}"></p>
+
 
 
     </form>
