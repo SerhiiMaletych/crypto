@@ -18,22 +18,27 @@ public class VigenereController {
         this.codec = codec;
     }
 
-    @RequestMapping("/vigenere")
-    public String getPage(Model model) {
+    @RequestMapping("/decode/vigenere")
+    public String getDecodePage(Model model) {
         model.addAttribute("operation", input);
-        return "coder/vigenere";
+        return "coder/decode/vigenere";
+    }
+    @RequestMapping("/encode/vigenere")
+    public String getEncodePage(Model model) {
+        model.addAttribute("operation", input);
+        return "coder/encode/vigenere";
     }
 
 
-    @PostMapping(value = "/vigenere", params = "encode")
+    @PostMapping(value = "/encode/vigenere", params = "encode")
     public String encode(@ModelAttribute("operation") Input input, Model model) {
         model.addAttribute("resultEncode", codec.encode(input));
-        return "coder/vigenere";
+        return "coder/encode/vigenere";
     }
 
-    @PostMapping(value = "/vigenere", params = "decode")
+    @PostMapping(value = "/decode/vigenere", params = "decode")
     public String decode(@ModelAttribute("operation") Input input, Model model) {
         model.addAttribute("resultDecode", codec.decode(input));
-        return "coder/vigenere";
+        return "coder/decode/vigenere";
     }
 }
