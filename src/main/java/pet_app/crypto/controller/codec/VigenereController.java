@@ -1,6 +1,5 @@
 package pet_app.crypto.controller.codec;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -29,12 +28,12 @@ public class VigenereController {
     @PostMapping(value = "/vigenere", params = "encode")
     public String encode(@ModelAttribute("operation") Input input, Model model) {
         model.addAttribute("result", codec.encode(input));
-        return "coder/caesar";
+        return "coder/vigenere";
     }
 
     @PostMapping(value = "/vigenere", params = "decode")
     public String decode(@ModelAttribute("operation") Input input, Model model) {
         model.addAttribute("result", codec.decode(input));
-        return "coder/caesar";
+        return "coder/vigenere";
     }
 }

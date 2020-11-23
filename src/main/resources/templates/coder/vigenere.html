@@ -1,10 +1,32 @@
-<!DOCTYPE HTML>
-<html xmlns:th="https://www.thymeleaf.org">
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <title></title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
+
+
+<div class="main-form">
+    <form action="#" th:action="@{/vigenere}" th:object="${operation}" method="POST">
+        <h2 class="h2-top">Please enter your words here:</h2>
+
+        <input class="user-input" type="text" th:field="*{input}"/>
+
+        <input type="submit" class="button" name="encode" value=""/>
+
+        <input class="user-input" type="text" th:field="*{input}"/>
+
+        <input type="submit" class="button" name="decode" value=""/>
+
+
+        <p class="result resultText" th:text="'Result: '"></p>
+        <p class="result" th:text=" ${result}"></p>
+
+
+    </form>
+</div>
 
 </body>
 </html>
