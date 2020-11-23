@@ -1,28 +1,31 @@
 package pet_app.crypto.coderService;
 
-
 import org.springframework.stereotype.Service;
+import pet_app.crypto.model.Input;
+
 
 @Service
-public class CaesarCodec implements Decoder, Encoder {
-    private static final String ALPHABET = "abcdefghijklmnopqrstuvwxyz ";
-    private int shift=3;
+public class CaesarCodec {
+    private static final String ALPHABET = "abcdefghijklmnopqrstuvwxyz";
+    private final int shift=3;
 
 
-    @Override
-    public String encode(String input) {
+
+    public String encode(Input input1) {
         StringBuilder ret = new StringBuilder();
-        for (int i = 0; i < input.length(); i++) {
-            ret.append(ALPHABET.charAt((ALPHABET.indexOf(input.charAt(i)) + shift) % ALPHABET.length()));
+        for (int i = 0; i < input1.getInput().length(); i++) {
+            ret.append(ALPHABET.charAt((ALPHABET.indexOf(input1.getInput().charAt(i)) + shift) % ALPHABET.length()));
         }
         return ret.toString();
     }
 
-    @Override
-    public String decode(String input) {
+    public String decode(Input input1)
+    {
         StringBuilder ret = new StringBuilder();
-        input.chars().forEach(c ->
+        input1.getInput().chars().forEach(c ->
                 ret.append(ALPHABET.charAt((ALPHABET.indexOf((char)c) - shift + ALPHABET.length()) % ALPHABET.length())));
         return ret.toString();
     }
+
+
 }

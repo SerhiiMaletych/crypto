@@ -13,10 +13,10 @@ public class CodecTemplateController {
         return "coders/morse";
     }
 
-    @RequestMapping(value = "/vigenere")
-    public String VigenereController() {
-        return "coders/vigenere";
-    }
+//    @RequestMapping(value = "/vigenere")
+//    public String VigenereController() {
+//        return "coders/vigenere";
+//    }
 
     @RequestMapping(value = "/vigenereOverCaesar")
     public String VigenereOverCaesarController() {
