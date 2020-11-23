@@ -1,14 +1,34 @@
 package pet_app.crypto.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import pet_app.crypto.coderService.ClearService;
+import pet_app.crypto.model.Input;
 
 
 @Controller
 public class MainController {
 
-   @RequestMapping(value = "/")
+    final
+    ClearService service;
+
+    public MainController(ClearService service) {
+        this.service = service;
+    }
+
+    @RequestMapping(value = "/")
     public String startPage() {
         return "startPage";
     }
+
+    @PostMapping(value = "/", params = "clear")
+    public String clear(@ModelAttribute("operation") Input input, Model model) {
+        model.addAttribute("operation", service.clearResult(input));
+        model.addAttribute("result", 0);
+        return "coder/clear";
 }
+    }
