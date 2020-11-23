@@ -1,39 +1,38 @@
 package pet_app.crypto.controller.codec;
 
-
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import pet_app.crypto.coderService.CaesarCodec;
+import pet_app.crypto.coderService.VigenereCodec;
 import pet_app.crypto.model.Input;
 
 @Controller
-public class CaesarController {
-    final CaesarCodec codec;
+public class VigenereController {
+    final
+    VigenereCodec codec;
     Input input = new Input();
 
-    public CaesarController(CaesarCodec codec) {
-
-
+    public VigenereController(VigenereCodec codec) {
         this.codec = codec;
     }
-    @RequestMapping("/caesar")
+
+    @RequestMapping("/vigenere")
     public String getPage(Model model) {
         model.addAttribute("operation", input);
-        return "coder/caesar";
+        return "coder/vigenere";
     }
 
 
-    @PostMapping(value = "/caesar", params = "encode")
+    @PostMapping(value = "/vigenere", params = "encode")
     public String encode(@ModelAttribute("operation") Input input, Model model) {
         model.addAttribute("result", codec.encode(input));
         return "coder/caesar";
     }
 
-    @PostMapping(value = "/caesar", params = "decode")
+    @PostMapping(value = "/vigenere", params = "decode")
     public String decode(@ModelAttribute("operation") Input input, Model model) {
         model.addAttribute("result", codec.decode(input));
         return "coder/caesar";
