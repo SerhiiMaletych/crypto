@@ -16,41 +16,6 @@ public class MorseCodec implements Decoder, Encoder {
     private HashMap<String, String> decodeMap = new HashMap<>();
     private Properties propertyFile = new Properties();
 
-    private void setPropertyToMap(InputStream ip, HashMap<String, String> encodeMap) throws IOException {
-        propertyFile.load(ip);
-        Set<Object> keys = propertyFile.keySet();
-        for (Object k : keys) {
-            String key = (String) k;
-            String value = propertyFile.getProperty(key);
-            encodeMap.put(key, value);
-        }
-        ip.close();
-    }
-
-    private void putEncode() throws IOException {
-        InputStream ip =  MorseCodec.class.
-                getClassLoader().getResourceAsStream("morseEncode.properties");
-        setPropertyToMap(ip, encodeMap);
-    }
-
-    private void putDecode() throws IOException {
-
-        InputStream ip =  MorseCodec.class.
-                getClassLoader().getResourceAsStream("morseDecode.properties");
-        setPropertyToMap(ip, decodeMap);
-    }
-    public MorseCodec() {
-        try {
-            putDecode();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        try {
-            putEncode();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
     @Override
     public String encode(Input input) {
         StringBuilder ret = new StringBuilder();
@@ -68,4 +33,42 @@ public class MorseCodec implements Decoder, Encoder {
         Arrays.stream(letters).forEach(s -> ret.append(decodeMap.get(s)));
         return ret.toString();
     }
+
+    private void setPropertyToMap(InputStream ip, HashMap<String, String> encodeMap) throws IOException {
+        propertyFile.load(ip);
+        Set<Object> keys = propertyFile.keySet();
+        for (Object k : keys) {
+            String key = (String) k;
+            String value = propertyFile.getProperty(key);
+            encodeMap.put(key, value);
+        }
+        ip.close();
+    }
+
+    private void putEncode() throws IOException {
+        InputStream ip = MorseCodec.class.
+                getClassLoader().getResourceAsStream("morseEncode.properties");
+        setPropertyToMap(ip, encodeMap);
+    }
+
+    private void putDecode() throws IOException {
+
+        InputStream ip = MorseCodec.class.
+                getClassLoader().getResourceAsStream("morseDecode.properties");
+        setPropertyToMap(ip, decodeMap);
+    }
+
+    public MorseCodec() {
+        try {
+            putDecode();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            putEncode();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

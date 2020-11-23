@@ -6,7 +6,7 @@ import pet_app.crypto.model.Input;
 @Service
 public class VigenereCodec implements Decoder, Encoder {
 
-    private static final String KEY = "HELLO";
+    private static final String KEY = "HELLOWORLD";
 
 
     @Override

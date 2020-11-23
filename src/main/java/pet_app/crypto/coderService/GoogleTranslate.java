@@ -19,9 +19,10 @@ public class GoogleTranslate implements Encoder, Decoder {
             + "&source=en"
             + "&target=uk"
             + "&q=";
+
     @Override
-    public String decode(Input input) throws IOException, InterruptedException {
-        String q = queryUkr + input.getInput();
+    public String encode(Input input) throws IOException, InterruptedException {
+        String q = queryEng+ input.getInput();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("https://www.googleapis.com/language/translate/v2?" + q))
                 .header("Referer", "https://www.daytranslations.com/free-translation-online/")
@@ -33,8 +34,8 @@ public class GoogleTranslate implements Encoder, Decoder {
     }
 
     @Override
-    public String encode(Input input) throws IOException, InterruptedException {
-        String q = queryEng+ input.getInput();
+    public String decode(Input input) throws IOException, InterruptedException {
+        String q = queryUkr + input.getInput();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("https://www.googleapis.com/language/translate/v2?" + q))
                 .header("Referer", "https://www.daytranslations.com/free-translation-online/")

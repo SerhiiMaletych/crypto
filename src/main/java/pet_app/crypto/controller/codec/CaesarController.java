@@ -2,7 +2,7 @@ package pet_app.crypto.controller.codec;
 
 
 
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -16,6 +16,7 @@ import pet_app.crypto.model.Input;
 public class CaesarController {
     final CaesarCodec codec;
     Input input = new Input();
+
     final
     ClearService service;
 
@@ -25,29 +26,34 @@ public class CaesarController {
         this.codec = codec;
         this.service = service;
     }
-    @RequestMapping("/caesar")
-    public String getPage(Model model) {
+    @RequestMapping("decode/caesar")
+    public String getEncodePage(Model model) {
         model.addAttribute("operation", input);
-        return "coder/caesar";
+        return "coder/decode/caesar";
+    }
+    @RequestMapping("encode/caesar")
+    public String getDecodePage(Model model) {
+        model.addAttribute("operation", input);
+
+        return "coder/encode/caesar";
     }
 
-
-    @PostMapping(value = "/caesar", params = "encode")
+    @PostMapping(value = "encode/caesar", params = "encode")
     public String encode(@ModelAttribute("operation") Input input, Model model) {
         model.addAttribute("resultEncode", codec.encode(input));
-        return "coder/caesar";
+        return "coder/encode/caesar";
     }
 
-    @PostMapping(value = "/caesar", params = "decode")
+    @PostMapping(value = "decode/caesar", params = "decode")
     public String decode(@ModelAttribute("operation") Input input, Model model) {
         model.addAttribute("resultDecode", codec.decode(input));
-        return "coder/caesar";
+        return "coder/decode/caesar";
     }
 
-    @PostMapping(value = "/caesar", params = "clear")
-    public String clear(@ModelAttribute("operation") Input input, Model model) {
-        model.addAttribute("operation", service.clearResult(input));
-        model.addAttribute("result", 0);
-        return "coder/caesar";
-    }
+//    @PostMapping(value = "/caesar", params = "clear")
+//    public String clear(@ModelAttribute("operation") Input input, Model model) {
+//        model.addAttribute("operation", service.clearResult(input));
+//        model.addAttribute("result", 0);
+//        return "coder/caesar";
+//    }
 }

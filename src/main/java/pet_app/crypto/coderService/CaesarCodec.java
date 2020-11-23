@@ -6,7 +6,7 @@ import pet_app.crypto.model.Input;
 
 @Service
 public class CaesarCodec implements Decoder, Encoder {
-    private static final String ALPHABET = "abcdefghijklmnopqrstuvwxyz";
+    private static final String ALPHABET = "abcdefghijklmnopqrstuvwxyz ";
     private final int shift=3;
 
 
