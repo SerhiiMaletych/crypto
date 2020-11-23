@@ -1,19 +1,12 @@
 plugins {
-	id 'org.springframework.boot' version '2.2.6.RELEASE'
+	id 'org.springframework.boot' version '2.3.1.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
 	id 'java'
 }
 
-group = 'petApp'
+group = 'com'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
-
-configurations {
-	developmentOnly
-	runtimeClasspath {
-		extendsFrom developmentOnly
-	}
-}
 
 repositories {
 	mavenCentral()
@@ -21,19 +14,18 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	runtimeOnly 'org.postgresql:postgresql'
 	compileOnly 'org.projectlombok:lombok'
-	testCompile group: 'org.mockito', name: 'mockito-core', version: '2.10.0'
+	annotationProcessor 'org.projectlombok:lombok'
+	compile group: 'org.hibernate.validator', name: 'hibernate-validator', version: '6.1.6.Final'
+	runtimeOnly 'org.postgresql:postgresql'
+	compile group: 'org.hibernate', name: 'hibernate-validator', version: '6.1.0.Final'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
 	compile group: 'org.webjars', name: 'bootstrap', version: '4.4.1-1'
-	implementation 'org.springframework.boot:spring-boot-starter-validation'
-
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
-	testImplementation 'org.springframework.security:spring-security-test'
 }
 
 test {

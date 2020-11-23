@@ -9,7 +9,6 @@ public class CaesarCodec implements Decoder, Encoder {
     private int shift=3;
 
 
-
     @Override
     public String encode(String input) {
         StringBuilder ret = new StringBuilder();
