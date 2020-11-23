@@ -1,6 +1,7 @@
 package pet_app.crypto.coderService;
 
 import org.springframework.stereotype.Service;
+import pet_app.crypto.model.Input;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -51,18 +52,18 @@ public class MorseCodec implements Decoder, Encoder {
         }
     }
     @Override
-    public String encode(String input) {
+    public String encode(Input input) {
         StringBuilder ret = new StringBuilder();
-        for (int i = 0; i < input.length(); i++) {
-            ret.append(encodeMap.get(input.charAt(i) + ""));
+        for (int i = 0; i < input.getInput().length(); i++) {
+            ret.append(encodeMap.get(input.getInput().charAt(i) + ""));
             ret.append(" ");
         }
         return ret.toString().trim();
     }
 
     @Override
-    public String decode(String input) {
-        String[] letters = input.split(" ");
+    public String decode(Input input) {
+        String[] letters = input.getInput().split(" ");
         StringBuilder ret = new StringBuilder();
         Arrays.stream(letters).forEach(s -> ret.append(decodeMap.get(s)));
         return ret.toString();

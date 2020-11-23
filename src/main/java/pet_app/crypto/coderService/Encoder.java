@@ -7,5 +7,5 @@ import java.io.IOException;
 
 @Component
 public interface Encoder {
-    String encode(String input) throws IOException, InterruptedException;
+    String encode(Input input) throws IOException, InterruptedException;
 }

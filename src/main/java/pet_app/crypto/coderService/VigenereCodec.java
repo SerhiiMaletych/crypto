@@ -1,6 +1,7 @@
 package pet_app.crypto.coderService;
 
 import org.springframework.stereotype.Service;
+import pet_app.crypto.model.Input;
 
 @Service
 public class VigenereCodec implements Decoder, Encoder {
@@ -10,11 +11,11 @@ public class VigenereCodec implements Decoder, Encoder {
 
 
     @Override
-    public String encode(String input) {
+    public String encode(Input input) {
         StringBuilder letters = new StringBuilder();
-        input = input.toUpperCase();
-        for (int i = 0, j = 0; i < input.length(); i++) {
-            char symbol = input.charAt(i);
+        String input1 = input.getInput().toUpperCase();
+        for (int i = 0, j = 0; i < input1.length(); i++) {
+            char symbol = input1.charAt(i);
             char keySymbol = KEY.charAt(j);
             int newIndex = (ALPHABET.indexOf(symbol) + ALPHABET.indexOf(keySymbol)) % ALPHABET.length();
             char newSymbol = ALPHABET.charAt(newIndex);
@@ -26,11 +27,11 @@ public class VigenereCodec implements Decoder, Encoder {
 
 
     @Override
-    public String decode(String input) {
+    public String decode(Input input) {
         StringBuilder letters = new StringBuilder();
-        input = input.toUpperCase();
-        for (int i = 0, j = 0; i < input.length(); i++) {
-            char symbol = input.charAt(i);
+        String input1 = input.getInput().toUpperCase();
+        for (int i = 0, j = 0; i < input1.length(); i++) {
+            char symbol = input1.charAt(i);
             char keySymbol = KEY.charAt(j);
             int newIndex =
                     (ALPHABET.indexOf(symbol) - ALPHABET.indexOf(keySymbol))

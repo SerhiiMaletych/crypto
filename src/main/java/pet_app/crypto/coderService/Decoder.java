@@ -8,5 +8,5 @@ import java.io.IOException;
 @Component
 public interface Decoder {
 
-    String decode(String input) throws IOException, InterruptedException;
+    String decode(Input input) throws IOException, InterruptedException;
 }
