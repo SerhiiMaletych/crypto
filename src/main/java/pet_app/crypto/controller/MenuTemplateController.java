@@ -6,21 +6,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class MenuTemplateController {
-    @RequestMapping(value = "/encodeMenu")
+    @RequestMapping(value = "/encode")
     public String encodeMenu() {
         return "menu/encodeMenu";
     }
 
-    @RequestMapping(value = "/decodeMenu")
+    @RequestMapping(value = "/decode")
     public String decodeMenu() {
         return "menu/decodeMenu";
     }
 
-    @RequestMapping(value = "/historyMenu")
+    @RequestMapping(value = "/history")
     public String historyMenu() {
         return "menu/historyMenu";
     }
-    @RequestMapping(value = "/analyticsMenu" )
+    @RequestMapping(value = "/analytics" )
     public String analyticsMenu() {
         return "menu/analyticsMenu";
     }
