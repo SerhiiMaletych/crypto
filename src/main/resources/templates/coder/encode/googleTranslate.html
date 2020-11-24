@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+
+
+<div class="main-form">
+    <form action="#" th:action="@{/encode/googleTranslate}" th:object="${operation}" method="POST">
+        <h2 class="h2-top">Please enter your words here:</h2>
+
+        <input class="user-input" type="text" th:field="*{input}"/>
+
+        <input type="submit" class="button" name="encode" value="encode"/>
+
+
+        <p class="result resultText" th:text="'Result for encode: '"></p>
+        <p class="result" th:text=" ${resultEncode}"></p>
+
+
+
+
+    </form>
+</div>
+
+</body>
+</html>
