@@ -12,8 +12,8 @@ public class AuthController {
         return "security/login";
     }
 
-    @GetMapping("/user-info")
+    @GetMapping("/logout-page")
     public String successfulLoginPage() {
-        return "security/user-info";
+        return "security/logout";
     }
 }

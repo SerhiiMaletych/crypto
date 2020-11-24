@@ -4,9 +4,7 @@ package pet_app.crypto.model;
 import lombok.Builder;
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Builder
 @Data
@@ -14,7 +12,9 @@ import javax.persistence.Table;
 @Table(name = "input")
 public class Input {
 
+
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String input;
 

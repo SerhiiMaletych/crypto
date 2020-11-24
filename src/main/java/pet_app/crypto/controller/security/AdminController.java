@@ -16,7 +16,6 @@ public class AdminController {
 
     }
 
-
     @RequestMapping("admin-page")
     public String admin() {
         return "security/admin-page";
