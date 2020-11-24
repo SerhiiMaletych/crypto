@@ -7,22 +7,18 @@
 </head>
 <body>
 
-
 <div class="main-form">
     <form action="#" th:action="@{/encode/vigenereOverCaesar}" th:object="${operation}" method="POST">
         <h2 class="h2-top">Please enter your words here:</h2>
 
-
         <input class="user-input" type="text" th:field="*{input}"/>
         <input type="submit" class="button" name="encode" value="encode"/>
         <input type="submit" class="button" name="clear" value="Clear"/>
-
+        <a href="/decode/vigenereOverCaesar" >Go to decode page</a>
 
 
         <p class="result resultText" th:text="'Result for encode: '"></p>
         <p class="result" th:text=" ${resultEncode}"></p>
-
-
 
     </form>
 </div>

@@ -50,10 +50,5 @@ public class CaesarController {
         return "coder/decode/caesar";
     }
 
-//    @PostMapping(value = "/caesar", params = "clear")
-//    public String clear(@ModelAttribute("operation") Input input, Model model) {
-//        model.addAttribute("operation", service.clearResult(input));
-//        model.addAttribute("result", 0);
-//        return "coder/caesar";
-//    }
+
 }
