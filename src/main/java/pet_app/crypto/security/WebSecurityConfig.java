@@ -1,4 +1,4 @@
-package pet_app.crypto.web;
+package pet_app.crypto.security;
 
 
 import org.springframework.context.annotation.Configuration;
