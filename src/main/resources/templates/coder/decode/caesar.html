@@ -16,13 +16,13 @@
         <input type="submit" class="button" name="decode" value="decode"/>
 
         <p class=" resultText" th:text="'Result for decode: '"></p>
+
         <p class="result" th:text=" ${resultDecode}"></p>
-        <p>
-            <input type="submit" class="button clearButton" name="clear" value="Clear"/></p>
-        <p>
-            <a href="/encode/caesar"><input type="button" class="button goToButton" value="Go to encode page" /></a>
-        </p>
-        <a href="/" ><input type="button" class="button goToButton" value="Go to main page" /></a>
+        <p>  <input type="submit" class="button clearButton" name="clear" value="Clear"/></p>
+
+        <p>  <a href="/encode/caesar"><input type="button" class="button goToButton" value="Go to encode page"/></a>  </p>
+
+        <a href="/"><input type="button" class="button goToButton" value="Go to main page"/></a>
 
     </form>
 </div>

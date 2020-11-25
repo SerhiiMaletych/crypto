@@ -8,22 +8,22 @@
 </head>
 <body>
 
-<div class="form">
+<div>
     <form action="#" th:action="@{/encode/morse}" th:object="${operation}" method="POST">
-        <h2 class="h2-top">Please enter your words here:</h2>
+        <h2 class="header">Please enter your words here:</h2>
 
         <input class="user-input" type="text" th:field="*{input}"/>
 
         <input type="submit" class="button" name="encode" value="encode"/>
-        <input type="submit" class="button" name="clear" value="Clear"/>
-        <a href="/decode/morse" >Go to decode page</a>
 
+        <p class=" resultText" th:text="'Result for encode: '"></p>
 
-        <p class="result resultText" th:text="'Result for encode: '"></p>
         <p class="result" th:text=" ${resultEncode}"></p>
-        <a href="/" >Go to main page</a>
+        <p>  <input type="submit" class="button clearButton" name="clear" value="Clear"/></p>
 
+        <p>  <a href="/decode/morse"><input type="button" class="button goToButton" value="Go to decode page"/></a>  </p>
 
+        <a href="/"><input type="button" class="button goToButton" value="Go to main page"/></a>
 
     </form>
 </div>

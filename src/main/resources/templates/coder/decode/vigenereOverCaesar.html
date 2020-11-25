@@ -8,22 +8,22 @@
 </head>
 <body>
 
-<div class="form">
+<div>
     <form action="#" th:action="@{/decode/vigenereOverCaesar}" th:object="${operation}" method="POST">
-        <h2 class="h2-top">Please enter your words here:</h2>
+        <h2 class="header">Please enter your words here:</h2>
 
         <input class="user-input" type="text" th:field="*{input}"/>
+
         <input type="submit" class="button" name="decode" value="decode"/>
-        <input type="submit" class="button" name="clear" value="Clear"/>
-        <a href="/encode/vigenereOverCaesar" >Go to encode page</a>
 
+        <p class=" resultText" th:text="'Result for decode: '"></p>
 
-
-        <p class="result resultText" th:text="'Result for decode: '"></p>
         <p class="result" th:text=" ${resultDecode}"></p>
-        <a href="/" >Go to main page</a>
+        <p>  <input type="submit" class="button clearButton" name="clear" value="Clear"/></p>
 
+        <p>  <a href="/encode/vigenereOverCaesar"><input type="button" class="button goToButton" value="Go to encode page"/></a>  </p>
 
+        <a href="/"><input type="button" class="button goToButton" value="Go to main page"/></a>
 
     </form>
 </div>
