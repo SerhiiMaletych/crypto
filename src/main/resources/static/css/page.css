@@ -7,14 +7,16 @@ div {
 }
 
 .button{
-    height: 25px;
+    height: 30px;
     width: 70px;
+    border: 1px solid lightblue;
 
 }
 .user-input {
     height: 25px;
     width: 200px;
     margin-left: 70px;
+    border: 2px solid lightslategray;
 }
 .header {
     margin-left: 50px;
@@ -29,15 +31,19 @@ div {
 
 .result {
     font-size: 16px;
-    margin-left: 110px;
+    margin-left: 70px;
+    height: 25px;
+    width: 200px;
+    border: 1px solid lightgreen;
 
 }
 
 .goToButton {
-    margin-left: 120px;
+    margin-left: 130px;
+    width: 130px;
 
 }
 .clearButton {
-    margin-left: 130px;
+    margin-left: 150px;
 }
 
