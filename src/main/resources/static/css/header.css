@@ -1,0 +1,10 @@
+.buttons {
+    width: 150px;
+    height: 30px;
+    border: 1px solid lightblue;
+}
+
+header {
+    margin-left: 300px;
+    margin-top: 10px;
+}

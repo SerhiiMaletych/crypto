@@ -7,17 +7,30 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="/css/code_menu.css">
+    <link rel="stylesheet" type="text/css" href="/css/header.css">
+
 
 </head>
 
 <body>
+<header>
+    <a href="/" ><input type="button" class="buttons" value="Main page"/></a>
+        <a href="/login" ><input type="button" class="buttons" value="Login"/></a>
+     <a href="/registration" ><input type="button" class="buttons" value="Registration"/></a>
+    <a href="/admin/admin-page" ><input type="button" class="buttons" value="Admin Page"/></a>
+    <a href="/logout-page" ><input type="button" class="buttons" value="User info"/></a>
 
-<table >
-<h2 >Welcome to my crypto application, please choose:</h2>
-<h3 ><a href="/encode" >Encode</a></h3>
-<h3 ><a href="/decode"  >Decode</a></h3>
-<h3 ><a href="/analytics" >Analytics</a></h3>
-<h3 ><a href="/history" >History</a></h3>
-</table>
+</header>
+<div>
+    <table>
+        <h3 class="topText">Welcome to my crypto application, please choose:</h3>
+        <p> <a href="/encode" ><input type="button" class="button" value="Encode"/></a></p>
+        <p>  <a href="/decode" ><input type="button" class="button" value="Decode"/></a></p>
+        <p> <a href="/analytics" ><input type="button" class="button" value="Analytics"/></a></p>
+        <p> <a href="/history" ><input type="button" class="button" value="History"/></a></p>
+
+    </table>
+</div>
 </body>
 </html>
