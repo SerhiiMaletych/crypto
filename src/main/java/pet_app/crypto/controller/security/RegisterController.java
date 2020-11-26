@@ -17,7 +17,7 @@ public class RegisterController {
 
     @GetMapping("/registration")
     public String createForm(User users) {
-        return "security/registration";
+        return "security/register";
 
     }
 
