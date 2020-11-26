@@ -1,0 +1,28 @@
+div {
+    height: 350px;
+    width: 400px;
+    margin-left:500px ;
+    margin-top: 80px;
+}
+
+.button{
+    height: 40px;
+    width: 90px;
+    border: 1px solid lightgreen;
+    margin-top: 10px;
+    margin-left: 60px;
+
+}
+
+.user-input {
+    height: 25px;
+    width: 200px;
+    border: 1px solid black;
+    margin: 5px;
+}
+
+.reg-word {
+    font-size: 35px;
+    color: brown;
+    margin-left: 15px;
+}

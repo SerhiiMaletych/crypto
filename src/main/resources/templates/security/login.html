@@ -4,31 +4,33 @@
     <meta charset="utf-8">
     <title>Login Customer</title>
     <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <link rel="stylesheet" type="text/css" href="/css/login.css">
+
 </head>
 <body>
 
 <header>
-    <a href="/" ><input type="button" class="buttons" value="Main page"/></a>
-    <a href="/login" ><input type="button" class="buttons" value="Login"/></a>
-    <a href="/registration" ><input type="button" class="buttons" value="Registration"/></a>
-    <a href="/admin/admin-page" ><input type="button" class="buttons" value="Admin Page"/></a>
-    <a href="/logout-page" ><input type="button" class="buttons" value="User info"/></a>
+    <a href="/"><input type="button" class="buttons" value="Main page"/></a>
+    <a href="/login"><input type="button" class="buttons" value="Login"/></a>
+    <a href="/registration"><input type="button" class="buttons" value="Registration"/></a>
+    <a href="/admin/admin-page"><input type="button" class="buttons" value="Admin Page"/></a>
+    <a href="/logout-page"><input type="button" class="buttons" value="User info"/></a>
 
 </header>
 
 
-<div class="form">
-    <form class="form-signin" method="post" action="/login">
-        <h2 class="login-word">Login</h2>
+<div>
+    <form method="post" action="/login">
+        <h2>Login</h2>
         <p>
 
-            <input type="text" id="username" name="username" class="form-control" placeholder="Username" required>
+            <input class="user-input" type="text" id="username" name="username" placeholder="Username" required>
         </p>
         <p>
-            <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+            <input class="user-input" type="password" id="password" name="password" placeholder="Password" required>
         </p>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-        <a href="/" ><input type="button" class="" value="Main page"/></a>
+        <button class="button sign-in" type="submit">Sign in</button>
+        <a href="/"><input type="button" class="button" value="Main page"/></a>
 
     </form>
 </div>
