@@ -7,19 +7,23 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
                 integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
                 crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="/css/code_menu.css">
 
     </head>
 
     <body>
 
-    <table>
-        <h3>You chosen decoding.</h3>
-        <h3>Here is a list of available codecs for decoding:</h3>
-        <h3 ><a href="/decode/caesar" >Caesar</a></h3>
-        <h3 ><a href="/decode/morse" >Morse</a></h3>
-        <h3 ><a href="/decode/googleTranslate" >Ukrainian-English</a></h3>
-        <h3 ><a href="/decode/vigenere" >Vigenere</a></h3>
-        <h3 ><a href="/decode/vigenereOverCaesar" >Vigenere over Caesar</a></h3>
-        </table>
+        <div>
+            <table>
+                <h3 class="topText">You chosen decoding.</h3>
+                <h3 class="middleText">Here is a list of available codecs for decoding:</h3>
+                <p> <a href="/decode/caesar" ><input type="button" class="button" value="Caesar"/></a></p>
+                <p>  <a href="/decode/morse" ><input type="button" class="button" value="Morse"/></a></p>
+                <p> <a href="/decode/googleTranslate" ><input type="button" class="button" value="Ukrainian-English"/></a></p>
+                <p> <a href="/decode/vigenere" ><input type="button" class="button" value="Vigenere"/></a></p>
+                <p> <a href="/decode/vigenereOverCaesar" ><input type="button" class="button" value="Vigenere over Caesar"/></a></p>
+                <p><a href="/"><input type="button" class="button goToButton " value="Go to main page"/></a></p>
+            </table>
+        </div>
     </body>
 </html>

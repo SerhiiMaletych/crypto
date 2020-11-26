@@ -1,0 +1,23 @@
+div {
+    height: 350px;
+    width: 400px;
+    margin-left:500px ;
+    margin-top: 80px;
+}
+.button {
+    height: 40px;
+    width: 180px;
+    border: 2px solid lightgreen;
+    margin-left: 60px;
+}
+.topText {
+    font-size: 33px;
+    color: coral;
+}
+.middleText {
+    font-size: 25px;
+
+}
+.goToButton {
+    border: 2px solid red;
+}
