@@ -48,13 +48,20 @@
 
         if (text1.value === text2.value)
             text2.style.borderColor = "#2EFE2E";
+
         else
+
             text2.style.borderColor = "red";
 
         document.getElementById("submit").onclick = function () {
             this.disabled = true;
             if (text1.value === text2.value) {
                 this.disabled = false;
+            }
+            else if (text1.value!=text2.value) {
+                alert("passwords don't match, please reload this page and try again");
+
+
             }
         }
     }

@@ -12,6 +12,10 @@ div {
     border: 1px solid lightblue;
 
 }
+.do {
+    border: 1px solid lightcoral;
+}
+
 .user-input {
     height: 25px;
     width: 200px;
