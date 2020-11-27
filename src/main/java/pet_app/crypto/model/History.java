@@ -9,7 +9,7 @@ public class History {
     @Id
     private long id;
     private String codec;
-    private String userInput;
+    private String input;
     private String translated;
     private String date;
 
@@ -17,14 +17,13 @@ public class History {
 
     }
 
-    public History(long id, String codec, String userInput, String translated, String date) {
+    public History(long id, String codec, String input, String translated, String date) {
         this.id = id;
         this.codec = codec;
-        this.userInput = userInput;
+        this.input = input;
         this.translated = translated;
         this.date = date;
     }
-
 
 
     public long getId() {
@@ -43,13 +42,14 @@ public class History {
         this.codec = codec;
     }
 
-    public String getUserInput() {
-        return userInput;
+    public String getInput() {
+        return input;
     }
 
-    public void setUserInput(String userInput) {
-        this.userInput = userInput;
+    public void setInput(String input) {
+        this.input = input;
     }
+
 
     public String getTranslated() {
         return translated;

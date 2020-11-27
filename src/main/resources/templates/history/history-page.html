@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>History</title>
+
+</head>
+<body>
+
+<div>
+    <h2>History</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>codec</th>
+            <th>date</th>
+            <th>input</th>
+            <th>translated</th>
+
+
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="history : ${history}">
+            <td th:text="${history.codec}"></td>
+            <td th:text="${history.date}"></td>
+            <td th:text="${history.input}"></td>
+            <td th:text="${history.translated}"></td>
+
+
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
+</body>
+</html>
