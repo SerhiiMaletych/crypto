@@ -1,6 +1,5 @@
 package pet_app.crypto.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pet_app.crypto.model.Input;
 import pet_app.crypto.repository.InputRepository;
