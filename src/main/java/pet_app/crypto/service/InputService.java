@@ -4,6 +4,8 @@ import org.springframework.stereotype.Service;
 import pet_app.crypto.model.Input;
 import pet_app.crypto.repository.InputRepository;
 
+
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -16,6 +18,7 @@ public class InputService {
         this.repository = repository;
     }
 
+    LocalDate date = LocalDate.now();
 
     public Input findById(Long id) throws Exception {
         return repository.findById(id).orElseThrow(() -> new Exception("Input not found"));
@@ -27,10 +30,16 @@ public class InputService {
     }
 
     public Input saveInput(Input input) {
+        input.setDate(date);
         return repository.save(input);
     }
+
+
+
 
     public void deleteById(Long id) {
         repository.deleteById(id);
     }
+
+
 }

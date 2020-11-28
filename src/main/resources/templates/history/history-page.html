@@ -17,8 +17,6 @@
             <th>input</th>
             <th>translated</th>
 
-
-
         </tr>
         </thead>
         <tbody>
@@ -27,7 +25,7 @@
             <td th:text="${history.date}"></td>
             <td th:text="${history.input}"></td>
             <td th:text="${history.translated}"></td>
-
+            <td><a th:href="@{history-delete/{id}(id=${history.id})}" >Delete row</a></td>
 
         </tr>
         </tbody>

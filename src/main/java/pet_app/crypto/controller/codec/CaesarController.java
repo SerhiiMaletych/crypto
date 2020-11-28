@@ -1,6 +1,7 @@
 package pet_app.crypto.controller.codec;
 
 
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -10,19 +11,18 @@ import pet_app.crypto.coderService.CaesarCodec;
 import pet_app.crypto.coderService.ClearService;
 import pet_app.crypto.model.Input;
 
+
 @Controller
 public class CaesarController {
-    final CaesarCodec codec;
     Input input = new Input();
+    final CaesarCodec codec;
 
-    final
-    ClearService service;
 
-    public CaesarController(CaesarCodec codec, ClearService service) {
-
+    public CaesarController(CaesarCodec codec) {
 
         this.codec = codec;
-        this.service = service;
+
+
     }
 
     @RequestMapping("decode/caesar")
@@ -34,7 +34,6 @@ public class CaesarController {
     @RequestMapping("encode/caesar")
     public String getDecodePage(Model model) {
         model.addAttribute("operation", input);
-
         return "coder/encode/caesar";
     }
 

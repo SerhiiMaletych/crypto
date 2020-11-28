@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Create history element</title>
+
+</head>
+<body>
+<form action="#" th:action="@{/history-create}" th:object="${input}" method="post">
+
+    <label for="codec"> codec</label>
+    <input type="text" th:field="*{codec}" id="codec" placeholder=" codec"> <br>
+
+    <label for="date"> date</label>
+    <input type="text" th:field="*{date}" id="date" placeholder=" date"> <br>
+
+    <label for="input"> input</label>
+    <input type="text" th:field="*{input}" id="input" placeholder=" input"> <br>
+
+    <label for="translated"> translated</label>
+    <input type="text" th:field="*{translated}" id="translated" placeholder=" translated"> <br>
+
+    <input type="submit"  value="create history element">
+</form>
+</body>
+</html>

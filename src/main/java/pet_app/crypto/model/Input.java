@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Builder
 @Data
@@ -19,13 +20,20 @@ public class Input {
     private String codec;
     private String input;
     private String translated;
-    private String date;
+    private LocalDate date;
+
+    public Input(String codec, String input, String translated, LocalDate date) {
+        this.codec = codec;
+        this.input = input;
+        this.translated = translated;
+        this.date = date;
+    }
+
 
     public Input() {
 
     }
-
-    public Input(long id, String codec, String input, String translated, String date) {
+    public Input(long id, String codec, String input, String translated, LocalDate date) {
         this.id = id;
         this.codec = codec;
         this.input = input;
@@ -33,6 +41,9 @@ public class Input {
         this.date = date;
     }
 
+    public String getInput() {
+        return input;
+    }
 
     public long getId() {
         return id;
@@ -50,9 +61,6 @@ public class Input {
         this.codec = codec;
     }
 
-    public String getInput() {
-        return input;
-    }
 
     public void setInput(String input) {
         this.input = input;
@@ -67,11 +75,11 @@ public class Input {
         this.translated = translated;
     }
 
-    public String getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 
