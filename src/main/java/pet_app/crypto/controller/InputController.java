@@ -1,5 +1,6 @@
 package pet_app.crypto.controller;
 
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,6 +12,7 @@ import pet_app.crypto.service.InputService;
 import java.util.List;
 
 @Controller
+@PreAuthorize("hasAuthority('admin_rights')")
 public class InputController {
     final
     InputService service;

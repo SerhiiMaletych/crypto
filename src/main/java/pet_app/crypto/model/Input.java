@@ -5,7 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 @Builder
 @Data
@@ -20,9 +21,9 @@ public class Input {
     private String codec;
     private String input;
     private String translated;
-    private LocalDate date;
+    private Date date;
 
-    public Input(String codec, String input, String translated, LocalDate date) {
+    public Input(String codec, String input, String translated, Date date) {
         this.codec = codec;
         this.input = input;
         this.translated = translated;
@@ -33,7 +34,7 @@ public class Input {
     public Input() {
 
     }
-    public Input(long id, String codec, String input, String translated, LocalDate date) {
+    public Input(long id, String codec, String input, String translated, Date date) {
         this.id = id;
         this.codec = codec;
         this.input = input;
@@ -75,12 +76,12 @@ public class Input {
         this.translated = translated;
     }
 
-    public LocalDate getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(LocalDate date) {
-        this.date = date;
+    public void setDate(Date date) {
+        this.date =date;
     }
 
 
