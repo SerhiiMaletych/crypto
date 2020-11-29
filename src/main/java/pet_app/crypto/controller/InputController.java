@@ -12,7 +12,7 @@ import pet_app.crypto.service.InputService;
 import java.util.List;
 
 @Controller
-@PreAuthorize("hasAuthority('admin_rights')")
+//@PreAuthorize("hasAuthority('admin_rights')")
 public class InputController {
     final
     InputService service;

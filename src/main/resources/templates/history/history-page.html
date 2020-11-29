@@ -4,11 +4,26 @@
     <meta charset="UTF-8">
     <title>History</title>
 
+    <link rel="stylesheet" type="text/css" href="/css/history.css">
+    <link rel="stylesheet" type="text/css" href="/css/header.css">
+
+
 </head>
 <body>
 
+<header>
+    <a href="/" ><input type="button" class="buttons" value="Main page"/></a>
+    <a href="/login" ><input type="button" class="buttons" value="Login"/></a>
+    <a href="/registration" ><input type="button" class="buttons" value="Registration"/></a>
+    <a href="/admin/admin-page" ><input type="button" class="buttons" value="Admin Page"/></a>
+    <a href="/logout-page" ><input type="button" class="buttons" value="User info"/></a>
+
+</header>
+
 <div>
-    <h2>History</h2>
+
+
+    <h2 class="history">History</h2>
     <table>
         <thead>
         <tr>
@@ -21,17 +36,19 @@
         </thead>
         <tbody>
         <tr th:each="history : ${history}">
-            <td th:text="${history.codec}"></td>
-            <td th:text="${history.date}"></td>
-            <td th:text="${history.input}"></td>
-            <td th:text="${history.translated}"></td>
-            <td><a th:href="@{history-delete/{id}(id=${history.id})}" >Delete row</a></td>
+            <td class="data" th:text="${history.codec}"></td>
+            <td class="data" th:text="${history.date}"></td>
+            <td class="data" th:text="${history.input}"></td>
+            <td class="data" th:text="${history.translated}"></td>
+            <td><a th:href="@{history-delete/{id}(id=${history.id})}">
+                <input type="button" class="delete " value="Delete row"/> </a></td>
+
 
 
         </tr>
         </tbody>
     </table>
-    <p><a href="/" ><input type="button" class="" value="Go to main page"/></a></p>
+    <p><a href="/" ><input type="button" class="button" value="Go to main page"/></a></p>
 
 </div>
 

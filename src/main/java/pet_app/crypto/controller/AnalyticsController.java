@@ -4,6 +4,6 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 
 @Controller
-@PreAuthorize("hasAuthority('admin_rights')")
+//@PreAuthorize("hasAuthority('admin_rights')")
 public class AnalyticsController {
 }

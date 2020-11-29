@@ -1,0 +1,31 @@
+div {
+    margin-left: 200px;
+    margin-top: 100px;
+}
+th {
+    width: 200px;
+    height: 40px;
+    font-size: 30px;
+
+}
+
+.history {
+    margin-left: 400px;
+    color: brown;
+    font-size: 40px;
+}
+.button {
+    margin-left: 350px;
+    width: 130px;
+    height: 30px;
+    border: 1px solid lightgreen;
+}
+
+.data {
+    border: 1px solid black;
+}
+.delete {
+    width: 100px;
+    height: 25px;
+    border: 1px solid red;
+}
