@@ -5,15 +5,21 @@ import org.springframework.data.jpa.repository.Query;
 import pet_app.crypto.model.Input;
 import pet_app.crypto.model.User;
 
+import javax.validation.constraints.Max;
 import java.util.List;
 
 public interface InputRepository extends JpaRepository<Input, Long> {
 
     @Query(value= "SELECT codec FROM input GROUP BY codec ORDER BY count(*) DESC LIMIT 1", nativeQuery = true)
     String findMostUsedCodec ();
-
     @Query(value ="SELECT input FROM input ORDER BY  input DESC", nativeQuery = true)
     List descendingInputs();
     @Query(value = "SELECT * FROM input ORDER BY date ASC", nativeQuery = true)
     List sortToDate();
+    @Query(value = "TRUNCATE TABLE input", nativeQuery = true)
+    void clearHistory() ;
+    @Query(value = "SELECT * FROM input ORDER BY id desc limit 1", nativeQuery = true)
+    List lastElement() ;
+
+
 }
