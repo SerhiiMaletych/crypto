@@ -27,6 +27,14 @@ public class AnalyticsController {
     public String mostUsedCodec() {
         return  repository.findMostUsedCodec();
     }
+    @GetMapping("/descending_inputs")
+    public List descendingInputs() {
+        return  repository.descendingInputs();
+    }
+    @GetMapping("/sort_to_date")
+    public List sortToDate() {
+        return repository.sortToDate();
+    }
 
 
 
