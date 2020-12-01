@@ -41,6 +41,9 @@ public class Input {
         this.date = date;
     }
 
+    public Input(String input) {
+    }
+
     public String getInput() {
         return input;
     }

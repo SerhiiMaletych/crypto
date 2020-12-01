@@ -8,7 +8,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import pet_app.crypto.model.Status;
 import pet_app.crypto.model.User;
 
-
 import java.util.Collection;
 import java.util.List;
 

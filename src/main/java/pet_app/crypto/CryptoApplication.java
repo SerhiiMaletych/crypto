@@ -10,8 +10,6 @@ import pet_app.crypto.model.User;
 import pet_app.crypto.service.UserService;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 
 @SpringBootApplication
 public class CryptoApplication {
