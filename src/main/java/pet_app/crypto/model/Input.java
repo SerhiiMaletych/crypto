@@ -5,7 +5,6 @@ import lombok.Builder;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 @Builder
@@ -21,20 +20,20 @@ public class Input {
     private String codec;
     private String input;
     private String translated;
-    private Date date;
+    private String date;
 
     public Input(String codec, String input, String translated, Date date) {
         this.codec = codec;
         this.input = input;
         this.translated = translated;
-        this.date = date;
+        this.date = String.valueOf(date);
     }
 
 
     public Input() {
 
     }
-    public Input(long id, String codec, String input, String translated, Date date) {
+    public Input(long id, String codec, String input, String translated, String date) {
         this.id = id;
         this.codec = codec;
         this.input = input;
@@ -76,11 +75,11 @@ public class Input {
         this.translated = translated;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date =date;
     }
 

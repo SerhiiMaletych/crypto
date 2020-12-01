@@ -3,9 +3,7 @@ package pet_app.crypto.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import pet_app.crypto.model.Input;
-import pet_app.crypto.model.User;
 
-import javax.validation.constraints.Max;
 import java.util.List;
 
 public interface InputRepository extends JpaRepository<Input, Long> {
@@ -14,10 +12,10 @@ public interface InputRepository extends JpaRepository<Input, Long> {
     String findMostUsedCodec ();
     @Query(value ="SELECT input FROM input ORDER BY  input DESC", nativeQuery = true)
     List descendingInputs();
-    @Query(value = "SELECT * FROM input ORDER BY date ASC", nativeQuery = true)
+    @Query(value = "SELECT * FROM input ORDER BY date DESC", nativeQuery = true)
     List sortToDate();
     @Query(value = "TRUNCATE TABLE input", nativeQuery = true)
-    void clearHistory() ;
+    String clearHistory(String message) ;
     @Query(value = "SELECT * FROM input ORDER BY id desc limit 1", nativeQuery = true)
     List lastElement() ;
 

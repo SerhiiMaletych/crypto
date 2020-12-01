@@ -5,13 +5,9 @@ import pet_app.crypto.coderService.*;
 import pet_app.crypto.model.Input;
 import pet_app.crypto.repository.InputRepository;
 
-
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
 import java.util.List;
 
 @Service
@@ -33,7 +29,8 @@ public class InputService {
     }
 
 
-    Date date=java.util.Calendar.getInstance().getTime();
+    LocalDateTime dateTime = LocalDateTime.now();
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
 
     public Input findById(Long id) throws Exception {
         return repository.findById(id).orElseThrow(() -> new Exception("Input not found"));
@@ -48,72 +45,76 @@ public class InputService {
         repository.deleteById(id);
     }
 
-    public Input saveInput(Input input) {
-        input.setDate(date);
-        return repository.save(input);
-    }
 
-    public Input saveEncodeCaesar(Input input) {
-        input.setDate(date);
+    public void saveEncodeCaesar(Input input) {
+        input.setDate(dateTime.format(formatter));
         input.setCodec("CAESAR");
         input.setTranslated(caesarCodec.encode(input));
-        return repository.save(input);
+        repository.save(input);
     }
 
-    public Input saveDecodeCaesar(Input input) {
-        input.setDate(date);
+    public void saveDecodeCaesar(Input input) {
+        input.setDate(dateTime.format(formatter));
         input.setCodec("CAESAR");
         input.setTranslated(caesarCodec.decode(input));
-        return repository.save(input);
+        repository.save(input);
     }
 
-    public Input saveEncodeMorse(Input input) {
-        input.setDate(date);
+    public void saveEncodeMorse(Input input) {
+        input.setDate(dateTime.format(formatter));
         input.setCodec("MORSE");
         input.setTranslated(morseCodec.encode(input));
-        return repository.save(input);
+        repository.save(input);
     }
-    public Input saveDecodeMorse(Input input) {
-        input.setDate(date);
+
+    public void saveDecodeMorse(Input input) {
+        input.setDate(dateTime.format(formatter));
         input.setCodec("MORSE");
         input.setTranslated(morseCodec.decode(input));
-        return repository.save(input);
+        repository.save(input);
     }
-    public Input saveEncodeGoogle(Input input) throws IOException, InterruptedException {
-        input.setDate(date);
+
+    public void saveEncodeGoogle(Input input) throws IOException, InterruptedException {
+        input.setDate(dateTime.format(formatter));
         input.setCodec("GOOGLE");
         input.setTranslated(googleTranslate.encode(input));
-        return repository.save(input);
+        repository.save(input);
     }
-    public Input saveDecodeGoogle(Input input) throws IOException, InterruptedException {
-        input.setDate(date);
+
+    public void saveDecodeGoogle(Input input) throws IOException, InterruptedException {
+        input.setDate(dateTime.format(formatter));
         input.setCodec("GOOGLE");
         input.setTranslated(googleTranslate.decode(input));
-        return repository.save(input);
+        repository.save(input);
     }
-    public Input saveEncodeVigenere(Input input) {
-        input.setDate(date);
+
+    public void saveEncodeVigenere(Input input) {
+        input.setDate(dateTime.format(formatter));
         input.setCodec("VIGENERE");
         input.setTranslated(vigenereCodec.encode(input));
-        return repository.save(input);
+        repository.save(input);
     }
-    public Input saveDecodeVigenere(Input input) {
-        input.setDate(date);
+
+    public void saveDecodeVigenere(Input input) {
+        input.setDate(dateTime.format(formatter));
         input.setCodec("Vigenere");
         input.setTranslated(vigenereCodec.decode(input));
-        return repository.save(input);
+        repository.save(input);
     }
-    public Input saveEncodeVigenereOverCaesar(Input input) {
-        input.setDate(date);
+
+    public void saveEncodeVigenereOverCaesar(Input input) {
+        input.setDate(dateTime.format(formatter));
+        ;
         input.setCodec("VIGENEREOVERCAESAR");
         input.setTranslated(vigenereOverCaesar.encode(input));
-        return repository.save(input);
+        repository.save(input);
     }
-    public Input saveDecodeVigenereOverCaesar(Input input) {
-        input.setDate(date);
+
+    public void saveDecodeVigenereOverCaesar(Input input) {
+        input.setDate(dateTime.format(formatter));
         input.setCodec("VIGENEREOVERCAESAR");
         input.setTranslated(vigenereOverCaesar.decode(input));
-        return repository.save(input);
+        repository.save(input);
     }
 
 
