@@ -3,6 +3,10 @@
     <head>
         <title>Crypto Application</title>
 
+        <link rel="stylesheet" type="text/css" href="/css/header.css">
+        <link rel="stylesheet" type="text/css" href="/css/analytics_menu.css">
+
+
 
     </head>
 
@@ -15,12 +19,18 @@
             <a href="/logout-page" ><input type="button" class="buttons" value="User info"/></a>
 
         </header>
-
+<div>
 <table>
-        <h3>Here is analytics menu, choose one:</h3>
-        <h3 >Sort and print all data according to date it was saved</h3>
-        <h3 >Find most popular codec</h3>
-        <h3 >Print all encoding inputs(in descending order)</h3>
+        <h2 class="topText">Here is analytics menu, choose one:</h2>
+    <p> <a href="/analytics/sort_to_date" ><input type="button" class="button" value="Sort history by date"/></a></p>
+    <p> <a href="/analytics/most_used_codec" ><input type="button" class="button" value="Most used codec"/></a></p>
+    <p> <a href="/analytics/descending_inputs" ><input type="button" class="button" value="Inputs in desc order"/></a></p>
+
+
+
+
 </table>
+</div>
+
     </body>
 </html>

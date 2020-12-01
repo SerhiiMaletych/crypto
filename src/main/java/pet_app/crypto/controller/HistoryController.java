@@ -21,7 +21,7 @@ class HistoryController {
     public String findAll(Model model) {
         List<Input> history = service.findAll();
         model.addAttribute("history", history);
-        return "history/history-page";
+        return "history/history_page";
 
     }
     }

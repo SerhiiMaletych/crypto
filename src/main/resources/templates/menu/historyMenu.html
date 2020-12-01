@@ -3,24 +3,29 @@
     <head>
         <title>Crypto Application</title>
 
+        <link rel="stylesheet" type="text/css" href="/css/header.css">
+        <link rel="stylesheet" type="text/css" href="/css/history_menu.css">
 
     </head>
 
     <body>
         <header>
-            <a href="/" ><input type="button" class="buttons" value="Main page"/></a>
-            <a href="/login" ><input type="button" class="buttons" value="Login"/></a>
-            <a href="/registration" ><input type="button" class="buttons" value="Registration"/></a>
-            <a href="/admin/admin-page" ><input type="button" class="buttons" value="Admin Page"/></a>
-            <a href="/logout-page" ><input type="button" class="buttons" value="User info"/></a>
-
+            <a href="/"><input type="button" class="buttons" value="Main page"/></a>
+            <a href="/login"><input type="button" class="buttons" value="Login"/></a>
+            <a href="/registration"><input type="button" class="buttons" value="Registration"/></a>
+            <a href="/admin/admin-page"><input type="button" class="buttons" value="Admin Page"/></a>
+            <a href="/logout-page"><input type="button" class="buttons" value="User info"/></a>
         </header>
 
-    <table>
-        <h3>What are you going to do with history?</h3>
-        <h3 >Print all previous data</h3>
-        <h3 >Clear data</h3>
-        <h3 >Remove last element</h3>
-    </table>
+        <div>
+        <table>
+            <h2 class="topText">What are you going to do with history?</h2>
+            <p> <a href="/history/show_all" ><input type="button" class="button" value="Show history"/></a></p>
+            <p> <a href="/history/clear_history" ><input type="button" class="button" value="Clear history"/></a></p>
+            <p> <a href="/history/last_element" ><input type="button" class="button" value="Last element"/></a></p>
+
+
+        </table>
+        </div>
     </body>
 </html>
