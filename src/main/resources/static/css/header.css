@@ -3,8 +3,12 @@
     height: 30px;
     border: 1px solid lightblue;
 }
+.buttons:hover {
+    background-color: lightblue;
+}
 
 header {
     margin-left: 300px;
     margin-top: 10px;
+
 }

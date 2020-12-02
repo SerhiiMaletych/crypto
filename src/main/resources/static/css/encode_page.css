@@ -15,6 +15,9 @@ div {
 .do {
     border: 1px solid lightcoral;
 }
+.do:hover {
+    background-color: chartreuse;
+}
 
 .user-input {
     height: 25px;
@@ -47,7 +50,22 @@ div {
     width: 130px;
 
 }
+.goToButton:hover {
+    background-color: lightblue;
+}
+
+.switchButton {
+    margin-left: 130px;
+    width: 130px;
+
+}
+.switchButton:hover {
+    background-color: orange;
+}
 .clearButton {
     margin-left: 150px;
+}
+.clearButton:hover {
+    background-color: yellow;
 }
 
