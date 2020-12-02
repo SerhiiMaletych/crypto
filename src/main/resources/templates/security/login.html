@@ -5,6 +5,9 @@
     <title>Login Customer</title>
     <link rel="stylesheet" type="text/css" href="/css/header.css">
     <link rel="stylesheet" type="text/css" href="/css/login.css">
+    <link rel="stylesheet" type="text/css" href="/css/change_button_color.css">
+
+
 
 </head>
 <body>
@@ -19,7 +22,7 @@
 </header>
 
 
-<div>
+<div  >
     <form method="post" action="/login">
         <h2>Login</h2>
         <p>
@@ -29,10 +32,12 @@
         <p>
             <input class="user-input" type="password" id="password" name="password" placeholder="Password" required>
         </p>
-        <button class="button sign-in" type="submit">Sign in</button>
-        <a href="/"><input type="button" class="button" value="Main page"/></a>
+
+        <button  class="button sign-in bg_color_lightgreen" type="submit">Sign in</button>
+        <a  href="/"><input  type="button" class="button bg_color_lightblue" value="Main page"/></a>
 
     </form>
+
 </div>
 </body>
 </html>
