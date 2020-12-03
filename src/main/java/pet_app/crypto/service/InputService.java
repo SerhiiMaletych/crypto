@@ -29,8 +29,7 @@ public class InputService {
     }
 
 
-    LocalDateTime dateTime = LocalDateTime.now();
-    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+
 
     public Input findById(Long id) throws Exception {
         return repository.findById(id).orElseThrow(() -> new Exception("Input not found"));
@@ -47,6 +46,8 @@ public class InputService {
 
 
     public void saveEncodeCaesar(Input input) {
+        LocalDateTime dateTime = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
         input.setDate(dateTime.format(formatter));
         input.setCodec("CAESAR");
         input.setTranslated(caesarCodec.encode(input));
@@ -54,6 +55,8 @@ public class InputService {
     }
 
     public void saveDecodeCaesar(Input input) {
+        LocalDateTime dateTime = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
         input.setDate(dateTime.format(formatter));
         input.setCodec("CAESAR");
         input.setTranslated(caesarCodec.decode(input));
@@ -61,6 +64,8 @@ public class InputService {
     }
 
     public void saveEncodeMorse(Input input) {
+        LocalDateTime dateTime = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
         input.setDate(dateTime.format(formatter));
         input.setCodec("MORSE");
         input.setTranslated(morseCodec.encode(input));
@@ -68,6 +73,8 @@ public class InputService {
     }
 
     public void saveDecodeMorse(Input input) {
+        LocalDateTime dateTime = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
         input.setDate(dateTime.format(formatter));
         input.setCodec("MORSE");
         input.setTranslated(morseCodec.decode(input));
@@ -75,6 +82,8 @@ public class InputService {
     }
 
     public void saveEncodeGoogle(Input input) throws IOException, InterruptedException {
+        LocalDateTime dateTime = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
         input.setDate(dateTime.format(formatter));
         input.setCodec("GOOGLE");
         input.setTranslated(googleTranslate.encode(input));
@@ -82,6 +91,8 @@ public class InputService {
     }
 
     public void saveDecodeGoogle(Input input) throws IOException, InterruptedException {
+        LocalDateTime dateTime = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
         input.setDate(dateTime.format(formatter));
         input.setCodec("GOOGLE");
         input.setTranslated(googleTranslate.decode(input));
@@ -89,6 +100,8 @@ public class InputService {
     }
 
     public void saveEncodeVigenere(Input input) {
+        LocalDateTime dateTime = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
         input.setDate(dateTime.format(formatter));
         input.setCodec("VIGENERE");
         input.setTranslated(vigenereCodec.encode(input));
@@ -96,6 +109,8 @@ public class InputService {
     }
 
     public void saveDecodeVigenere(Input input) {
+        LocalDateTime dateTime = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
         input.setDate(dateTime.format(formatter));
         input.setCodec("Vigenere");
         input.setTranslated(vigenereCodec.decode(input));
@@ -103,6 +118,8 @@ public class InputService {
     }
 
     public void saveEncodeVigenereOverCaesar(Input input) {
+        LocalDateTime dateTime = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
         input.setDate(dateTime.format(formatter));
         ;
         input.setCodec("VIGENEREOVERCAESAR");
@@ -111,6 +128,8 @@ public class InputService {
     }
 
     public void saveDecodeVigenereOverCaesar(Input input) {
+        LocalDateTime dateTime = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
         input.setDate(dateTime.format(formatter));
         input.setCodec("VIGENEREOVERCAESAR");
         input.setTranslated(vigenereOverCaesar.decode(input));

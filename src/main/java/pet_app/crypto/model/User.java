@@ -18,12 +18,14 @@ public class User {
     @Size(min = 6, max = 70)
     @Column(name = "password")
     private String password;
+
+
     @Size(min = 1, max = 20)
     @Column(name = "first_name")
-    private String firstName;
+    private String name;
     @Size(min = 1, max = 30)
     @Column(name = "last_name")
-    private String lastName;
+    private String surname;
     @Enumerated(value = EnumType.STRING)
     @Column(name = "role")
     private Role role;
@@ -47,6 +49,23 @@ public class User {
         return email;
     }
 
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
     public void setEmail(String email) {
         this.email = email;
     }
@@ -59,21 +78,6 @@ public class User {
         this.password = password;
     }
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
 
     public Role getRole() {
         return role;
@@ -91,12 +95,12 @@ public class User {
         this.status = status;
     }
 
-    public User(Long id, @Size(min = 7, max = 40) String email, @Size(min = 6, max = 70) String password, @Size(min = 1, max = 20) String firstName, @Size(min = 1, max = 30) String lastName, Role role, Status status) {
+    public User(Long id, @Size(min = 7, max = 40) String email, @Size(min = 6, max = 70) String password, @Size(min = 1, max = 20) String name, @Size(min = 1, max = 30) String surname, Role role, Status status) {
         this.id = id;
         this.email = email;
         this.password = password;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.name = name;
+        this.surname = surname;
         this.role = role;
         this.status = status;
     }

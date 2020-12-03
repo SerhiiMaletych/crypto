@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+
+    <link rel="stylesheet" type="text/css" href="/css/history.css">
+    <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <link rel="stylesheet" type="text/css" href="/css/change_button_color.css">
+
+
+</head>
+<body>
+
+<header>
+    <a href="/" ><input type="button" class="buttons " value="Main page"/></a>
+    <a href="/login" ><input type="button" class="buttons " value="Login"/></a>
+    <a href="/registration" ><input type="button" class="buttons " value="Registration"/></a>
+    <a href="/admin/admin-page" ><input type="button" class="buttons " value="Admin Page"/></a>
+    <a href="/logout-page" ><input type="button" class="buttons " value="User info"/></a>
+
+</header>
+
+<div>
+
+
+    <h2 class="users">Users</h2>
+    <table>
+        <thead>
+        <tr>
+            <th  >ID</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Status</th>
+            <th>Role</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="users : ${users}">
+            <td class="data" th:text="${users.id}"></td>
+            <td class="data" th:text="${users.email}"></td>
+            <td class="data" th:text="${users.password}"></td>
+            <td class="data" th:text="${users.name}"></td>
+            <td class="data" th:text="${users.surname}"></td>
+            <td class="data" th:text="${users.status}"></td>
+            <td class="data" th:text="${users.role}"></td>
+            <td><a th:href="@{/user-delete/{id}(id=${users.id})}">
+                <input type="button" class="delete bg_color_coral" value="Delete row"/> </a></td>
+
+
+
+        </tr>
+        </tbody>
+    </table>
+    <p><a href="/" ><input type="button" class="button bg_color_lightblue" value="Go to main page"/></a></p>
+
+</div>
+
+
+</body>
+</html>
