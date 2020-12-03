@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="/css/header.css">
     <link rel="stylesheet" type="text/css" href="/css/user_info.css">
     <link rel="stylesheet" type="text/css" href="/css/change_button_color.css">
+    <script src="js/success.js"></script>
 
 
 
@@ -26,8 +27,8 @@
 
 <div class="form">
     <h2>Now you are logged</h2>
-    <form action="/logout" method="POST">
-        <button type="submit" class=" button logout bg_color_red">Logout</button>
+    <form onsubmit="confirmLogout()" action="/logout" method="POST">
+        <button id="logout" type="submit" class=" button logout bg_color_red">Logout</button>
         <p><a href="/" ><input type="button" class="button bg_color_lightblue" value="Go to main page"/></a></p>
 
 
