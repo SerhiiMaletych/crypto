@@ -26,8 +26,10 @@
 
 
 <div class="form">
-    <h2>Now you are logged</h2>
+    <h1>Now you are logged</h1>
     <form onsubmit="confirmLogout()" action="/logout" method="POST">
+        <h3 class="hello">Hello:</h3>
+        <h3 class="username" th:text="${username}"></h3>
         <button id="logout" type="submit" class=" button logout bg_color_red">Logout</button>
         <p><a href="/" ><input type="button" class="button bg_color_lightblue" value="Go to main page"/></a></p>
 

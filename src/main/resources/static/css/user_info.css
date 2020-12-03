@@ -16,3 +16,10 @@ div {
 .logout {
     border: 1px solid red;
 }
+.hello {
+    margin-left: 65px;
+}
+.username {
+    margin-left: 20px;
+    color: red;
+}
