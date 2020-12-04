@@ -4,7 +4,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import pet_app.crypto.repository.InputRepository;
+import pet_app.crypto.repository.HistoryRepository;
 import pet_app.crypto.service.InputService;
 
 import java.util.List;
@@ -14,9 +14,9 @@ import java.util.List;
 @PreAuthorize("hasAuthority('admin_rights')")
 public class HistoryRestController {
     final InputService service;
-    final InputRepository repository;
+    final HistoryRepository repository;
 
-    public HistoryRestController(InputService service, InputRepository repository) {
+    public HistoryRestController(InputService service, HistoryRepository repository) {
         this.service = service;
         this.repository = repository;
     }
