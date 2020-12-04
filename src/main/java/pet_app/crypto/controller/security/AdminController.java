@@ -27,7 +27,7 @@ public class AdminController {
         return "security/admin-page";
     }
 
-    @GetMapping("/admin-page/users")
+    @GetMapping("/users")
     public String findAllUsers(Model model) {
         List<User> users = userService.findAll();
         model.addAttribute("users", users);
@@ -37,7 +37,7 @@ public class AdminController {
     @GetMapping("/user-delete/{id}")
     public String deleteRow(@PathVariable("id") Long id) {
         userService.deleteById(id);
-        return "redirect:/admin/admin-page/users";
+        return "redirect:/admin/users";
 
     }
 

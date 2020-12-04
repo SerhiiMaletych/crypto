@@ -1,0 +1,17 @@
+div {
+    height: 300px;
+    width: 300px;
+    margin-left: 470px;
+    margin-top: 50px;
+}
+
+.button {
+    width: 130px;
+    height: 30px;
+    border: 1px solid black;
+    margin-left: 35px;
+}
+
+h3 {
+    color: brown;
+}
