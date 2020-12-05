@@ -4,8 +4,6 @@ import org.springframework.stereotype.Service;
 import pet_app.crypto.coderService.*;
 import pet_app.crypto.model.Input;
 import pet_app.crypto.repository.InputRepository;
-
-import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -16,19 +14,17 @@ public class InputService {
     final MorseCodec morseCodec;
     final VigenereCodec vigenereCodec;
     final VigenereOverCaesar vigenereOverCaesar;
-    final GoogleTranslate googleTranslate;
+    //    final GoogleTranslate googleTranslate;
     final InputRepository repository;
 
-    public InputService(InputRepository repository, CaesarCodec caesarCodec, MorseCodec morseCodec, VigenereCodec vigenereCodec, VigenereOverCaesar vigenereOverCaesar, GoogleTranslate googleTranslate) {
+    public InputService(InputRepository repository, CaesarCodec caesarCodec, MorseCodec morseCodec, VigenereCodec vigenereCodec, VigenereOverCaesar vigenereOverCaesar) {
         this.repository = repository;
         this.caesarCodec = caesarCodec;
         this.morseCodec = morseCodec;
         this.vigenereCodec = vigenereCodec;
         this.vigenereOverCaesar = vigenereOverCaesar;
-        this.googleTranslate = googleTranslate;
+//        this.googleTranslate = googleTranslate;
     }
-
-
 
 
     public Input findById(Long id) throws Exception {
@@ -81,23 +77,23 @@ public class InputService {
         repository.save(input);
     }
 
-    public void saveEncodeGoogle(Input input) throws IOException, InterruptedException {
-        LocalDateTime dateTime = LocalDateTime.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
-        input.setDate(dateTime.format(formatter));
-        input.setCodec("GOOGLE");
-        input.setTranslated(googleTranslate.encode(input));
-        repository.save(input);
-    }
-
-    public void saveDecodeGoogle(Input input) throws IOException, InterruptedException {
-        LocalDateTime dateTime = LocalDateTime.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
-        input.setDate(dateTime.format(formatter));
-        input.setCodec("GOOGLE");
-        input.setTranslated(googleTranslate.decode(input));
-        repository.save(input);
-    }
+//    public void saveEncodeGoogle(Input input) throws IOException, InterruptedException {
+//        LocalDateTime dateTime = LocalDateTime.now();
+//        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+//        input.setDate(dateTime.format(formatter));
+//        input.setCodec("GOOGLE");
+//        input.setTranslated(googleTranslate.encode(input));
+//        repository.save(input);
+//    }
+//
+//    public void saveDecodeGoogle(Input input) throws IOException, InterruptedException {
+//        LocalDateTime dateTime = LocalDateTime.now();
+//        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+//        input.setDate(dateTime.format(formatter));
+//        input.setCodec("GOOGLE");
+//        input.setTranslated(googleTranslate.decode(input));
+//        repository.save(input);
+//    }
 
     public void saveEncodeVigenere(Input input) {
         LocalDateTime dateTime = LocalDateTime.now();
