@@ -13,35 +13,31 @@ import java.util.List;
 @RestController
 @PreAuthorize("hasAuthority('admin_rights')")
 @RequestMapping("analytics")
-public class AnalyticsController {
+public class AnalyticsRestController {
 
     final AnalyticsRepository repository;
 
 
-    public AnalyticsController(AnalyticsRepository repository) {
+    public AnalyticsRestController(AnalyticsRepository repository) {
         this.repository = repository;
     }
 
     @GetMapping("/most_used_codec")
     public String mostUsedCodec(){
-
         return repository.findMostUsedCodec();
 
     }
     @GetMapping("/descending_inputs")
-    public List descendingInputs(Model model) {
-        model.addAttribute("descendingInputs", repository.descendingInputs());
+    public List descendingInputs() {
         return  repository.descendingInputs();
     }
     @GetMapping("/sort_to_date")
-    public List sortToDate(Model model) {
-        model.addAttribute("sortToDate", repository.sortToDate());
+    public List sortToDate() {
         return repository.sortToDate();
     }
 
     @GetMapping("/count_codec")
-    public List countCodec(Model model) {
-        model.addAttribute("sortToDate", repository.countCodec());
+    public List countCodec() {
         return repository.countCodec();
     }
 

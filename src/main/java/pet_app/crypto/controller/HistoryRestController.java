@@ -24,7 +24,7 @@ public class HistoryRestController {
 
     @RequestMapping("/clear_history")
     public String clearHistory() {
-        return repository.clearHistory("Now history is empty");
+        return repository.clearHistory();
 
     }
 

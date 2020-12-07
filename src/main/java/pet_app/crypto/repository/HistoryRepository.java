@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface HistoryRepository extends JpaRepository<Input, Long> {
     @Query(value = "TRUNCATE TABLE input", nativeQuery = true)
-    String clearHistory(String message) ;
+    String clearHistory() ;
     @Query(value = "SELECT * FROM input ORDER BY id desc limit 1", nativeQuery = true)
     List lastElement() ;
 

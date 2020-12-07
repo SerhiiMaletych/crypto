@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import pet_app.crypto.coderService.GoogleTranslate;
 import pet_app.crypto.coderService.VigenereOverCaesar;
 import pet_app.crypto.controller.codec.CaesarController;
 import pet_app.crypto.controller.codec.MorseController;
@@ -27,7 +26,7 @@ public class ControllerTestForNull {
     @Autowired
     HistoryController historyController;
     @Autowired
-    AnalyticsController analyticsController;
+    AnalyticsRestController analyticsController;
     @Autowired
     RegisterController registerController;
     @Autowired
@@ -44,8 +43,6 @@ public class ControllerTestForNull {
     VigenereController vigenereController;
     @Autowired
     VigenereOverCaesar vigenereOverCaesar;
-    @Autowired
-    GoogleTranslate googleTranslate;
 
 
     @Test
@@ -95,10 +92,6 @@ public class ControllerTestForNull {
     @Test
     public void vigenere_over_ceasar_controller_not_null() {
         assertThat(vigenereOverCaesar).isNotNull();
-    }
-    @Test
-    public void goole_controller_not_null() {
-        assertThat(googleTranslate).isNotNull();
     }
 
 
