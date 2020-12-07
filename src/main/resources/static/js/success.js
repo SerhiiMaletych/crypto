@@ -5,7 +5,7 @@ function confirmRegister() {
 
 function confirmLogin() {
     const login = document.forms[0].login.value;
-    alert("Thanks for login! Now you will be redirected to user-info page");
+    alert("Thanks for login! Now you will be redirected ");
 }
 
 function confirmLogout() {

@@ -39,6 +39,12 @@ public class AnalyticsController {
         return repository.sortToDate();
     }
 
+    @GetMapping("/count_codec")
+    public List countCodec(Model model) {
+        model.addAttribute("sortToDate", repository.countCodec());
+        return repository.countCodec();
+    }
+
 
 
 

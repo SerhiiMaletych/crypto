@@ -5,10 +5,10 @@ div {
     margin-top: 10px;
 }
 .button {
-    height: 40px;
-    width: 180px;
+    height: 60px;
+    width: 220px;
     border: 2px solid lightgreen;
-    margin-left: 60px;
+    margin-left: 30px;
 }
 .topText {
     font-size: 33px;
