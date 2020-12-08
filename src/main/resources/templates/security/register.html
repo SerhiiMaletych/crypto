@@ -22,7 +22,7 @@
 
 <div class="form">
     <h3 class="reg-word">Registration</h3>
-    <form onsubmit="confirmRegister()" action="/" th:action="@{/registration} "  th:object="${user}" method="post">
+    <form onsubmit="confirmRegister()" action="/" th:action="@{/registration} " th:object="${user}" method="post">
 
         <input class="user-input" type="text" th:field="*{email}" id="email" placeholder=" email"> <br>
 
@@ -34,7 +34,7 @@
 
         <input class="user-input" type="text" th:field="*{surname}" id="surname" placeholder=" surname"> <br>
 
-        <input class="button bg_color_lightgreen" type="submit" id="register"   value="Register">
+        <input class="button bg_color_lightgreen" type="submit" id="submit" value="Register">
 
     </form>
 </div>
@@ -43,30 +43,45 @@
 <script type="text/javascript">
     document.getElementById("password").addEventListener("keyup", testpassword);
     document.getElementById("confirm").addEventListener("keyup", testpassword);
+    document.getElementById("email").addEventListener("keyup", testpassword);
+
+
+
     const text1 = document.getElementById("password");
     const text2 = document.getElementById("confirm");
+    const email = document.getElementById("email");
+
+
+
 
     function testpassword() {
 
-        if (text1.value === text2.value)
+        if (text1.value === text2.value && text1.value !== '' && text2.value !== '')
             text2.style.borderColor = "#2EFE2E";
-
-        else
-
+        else {
             text2.style.borderColor = "red";
-
+        }
         document.getElementById("submit").onclick = function () {
             this.disabled = true;
-            if (text1.value === text2.value) {
-                this.disabled = false;
-            }
-            else if (text1.value!=text2.value) {
-                alert("passwords don't match, please reload this page and try again");
 
-
-            }
+            if (email.value === ''){
+            alert("email field is empty, reload this page and try again");
         }
+
+        else if (text1.value !== text2.value) {
+            alert("passwords don't match,  reload this page and try again");
+        }
+         else if (text1.value === '' || text2.value === '') {
+                alert("password field is empty, reload this page and try again");
+            }
+
+        else {
+            this.disabled = false;
+        }
+
     }
+    }
+
 
 </script>
 </body>
