@@ -46,12 +46,9 @@
     document.getElementById("email").addEventListener("keyup", testpassword);
 
 
-
     const text1 = document.getElementById("password");
     const text2 = document.getElementById("confirm");
     const email = document.getElementById("email");
-
-
 
 
     function testpassword() {
@@ -68,6 +65,7 @@
             alert("email field is empty, reload this page and try again");
         }
 
+
         else if (text1.value !== text2.value) {
             alert("passwords don't match,  reload this page and try again");
         }
@@ -81,7 +79,6 @@
 
     }
     }
-
 
 </script>
 </body>

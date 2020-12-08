@@ -1,0 +1,12 @@
+.main {
+    width: 400px;
+    height: 300px;
+    margin-left: 450px;
+    margin-top: 200px;
+}
+.button {
+    height: 60px;
+    width: 220px;
+    border: 2px solid lightgreen;
+    margin-left: 30px;
+}
