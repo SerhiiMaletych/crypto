@@ -14,7 +14,6 @@ public class InputService {
     final MorseCodec morseCodec;
     final VigenereCodec vigenereCodec;
     final VigenereOverCaesar vigenereOverCaesar;
-    //    final GoogleTranslate googleTranslate;
     final InputRepository repository;
 
     public InputService(InputRepository repository, CaesarCodec caesarCodec, MorseCodec morseCodec, VigenereCodec vigenereCodec, VigenereOverCaesar vigenereOverCaesar) {
@@ -23,7 +22,7 @@ public class InputService {
         this.morseCodec = morseCodec;
         this.vigenereCodec = vigenereCodec;
         this.vigenereOverCaesar = vigenereOverCaesar;
-//        this.googleTranslate = googleTranslate;
+
     }
 
 
