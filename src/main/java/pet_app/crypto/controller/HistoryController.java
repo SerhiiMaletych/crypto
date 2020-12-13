@@ -26,9 +26,11 @@ class HistoryController {
         return "history/history_page";
     }
         @GetMapping("/history-delete/{id}")
-        public void deleteRow(@PathVariable("id") Long id) {
+        public String deleteRow(@PathVariable("id") Long id) {
             service.deleteById(id);
+            return "redirect:/history/show_all";
 
 
     }
+
     }

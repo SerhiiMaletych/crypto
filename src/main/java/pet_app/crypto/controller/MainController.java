@@ -25,9 +25,9 @@ public class MainController {
     }
 
     @PostMapping(value = "/", params = "clear")
-    public void clear(@ModelAttribute("operation") Input input, Model model) {
+    public String clear(@ModelAttribute("operation") Input input, Model model) {
         model.addAttribute("operation", service.clearResult(input));
         model.addAttribute("result", 0);
-
+        return "coder/clear";
 }
     }
