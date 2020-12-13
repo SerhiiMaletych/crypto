@@ -1,8 +1,9 @@
 package pet_app.crypto.controller;
 
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import pet_app.crypto.repository.HistoryRepository;
 import pet_app.crypto.service.InputService;
 
@@ -23,9 +24,7 @@ public class HistoryRestController {
 
     @RequestMapping("/clear_history")
     public void clearHistory() {
-    repository.clearHistory();
-    
-
+        repository.clearHistory();
     }
     @GetMapping("/last_element")
     public List lastAddedElement() {

@@ -1,5 +1,5 @@
 .buttons {
-    width: 150px;
+    width: 19.6%;
     height: 30px;
     border: 1px solid lightblue;
 }
@@ -8,7 +8,6 @@
 }
 
 header {
-    margin-left: 20%;
     margin-top: 10px;
 
 }
