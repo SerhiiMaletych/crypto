@@ -10,9 +10,9 @@ import java.util.Date;
 @Builder
 @Data
 @Entity
+
 @Table(name = "input")
 public class Input {
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

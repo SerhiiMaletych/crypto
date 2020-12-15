@@ -15,9 +15,9 @@ public class CaesarCodecTest {
     @Autowired
     CaesarCodec caesarCodec;
 
+
     @Test
     public void testEncodeOneWord() {
-
         Input input = new Input("hello");
         String expected = "khoor";
         assertEquals(caesarCodec.encode(input), expected);
