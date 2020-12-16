@@ -8,7 +8,8 @@ import pet_app.crypto.model.Input;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@SpringBootTest
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+
 public class VigenereCodecTest {
     @Autowired
     VigenereCodec vigenereCodec;

@@ -9,7 +9,8 @@ import pet_app.crypto.model.Input;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@SpringBootTest
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+
 public class VigenereOverCaesarTest {
     @Autowired
     VigenereOverCaesar vigenereOverCaesar;
@@ -39,4 +40,20 @@ public class VigenereOverCaesarTest {
         String expected = "hello world";
         assertEquals(vigenereOverCaesar.decode(input), expected);
     }
+
+    @Test
+    public void testEncodeMultipleWords1() {
+        Input input = new Input("hello and welcome to my app");
+        String expected = "kioprddrgdziogrqhdwscqaddts";
+        assertEquals(vigenereOverCaesar.encode(input), expected);
+    }
+    @Test
+    public void testDecodeMultipleWords1() {
+        Input input = new Input("kioprddrgdziogrqhdwscqaddts");
+
+        String expected = "hello and welcome to my app";
+        assertEquals(vigenereOverCaesar.decode(input), expected);
+    }
+
+
 }

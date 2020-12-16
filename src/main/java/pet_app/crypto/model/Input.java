@@ -29,7 +29,9 @@ public class Input {
         this.date = String.valueOf(date);
     }
 
-
+    public Input(String input) {
+        this.input=input;
+    }
     public Input() {
 
     }
@@ -41,8 +43,7 @@ public class Input {
         this.date = date;
     }
 
-    public Input(String input) {
-    }
+
 
     public String getInput() {
         return input;

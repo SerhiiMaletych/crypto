@@ -8,7 +8,8 @@ import pet_app.crypto.model.Input;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@SpringBootTest
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+
 public class MorseCodecTests {
 
     @Autowired
@@ -41,4 +42,6 @@ public class MorseCodecTests {
         String expected = "hello world";
         assertEquals(morseCodec.decode(input), expected);
     }
+
+
 }
