@@ -5,6 +5,9 @@
     <title>Vigenere Over Caesar</title>
     <link rel="stylesheet" type="text/css" href="/css/encode_page.css">
     <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
 
 </head>
 <body>
@@ -18,13 +21,14 @@
 
 </header>
 
-<div>
+<div id="text-change">
     <form action="#" th:action="@{/encode/vigenereOverCaesar}" th:object="${operation}" method="POST">
         <h2 class="header">Please enter your words here:</h2>
 
-        <input class="user-input" type="text" th:field="*{input}"/>
+        <input class="user-input" v-model="question" type="text" th:field="*{input}"/>
 
         <input type="submit" class="button do" name="encode" value="encode"/>
+        <p class="answer">{{answer}}</p>
 
         <p class=" resultText" th:text="'Result for encode: '"></p>
 
@@ -38,5 +42,27 @@
     </form>
 </div>
 
+<script>var watchExampleVM = new Vue({
+    el: '#text-change',
+    data: {
+        question: '',
+        answer: 'Put your text here'
+    },
+    watch: {
+        question: function (newQuestion, oldQuestion) {
+            this.answer = 'Waiting for you...'
+            this.debouncedGetAnswer()
+        }
+    },
+    created: function () {
+        this.debouncedGetAnswer = _.debounce(this.getAnswer, 500)
+    },
+    methods: {
+        getAnswer: function () {
+            this.answer = 'Press encode button or ENTER'
+
+        }
+    }
+})</script>
 </body>
 </html>

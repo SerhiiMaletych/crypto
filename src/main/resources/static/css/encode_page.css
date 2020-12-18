@@ -68,3 +68,9 @@ div {
     background-color: yellow;
 }
 
+.answer {
+    margin-left: 80px;
+    color:red;
+    font-size: 20px;
+}
+
