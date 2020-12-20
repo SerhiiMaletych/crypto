@@ -9,17 +9,13 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+
+
 </head>
-<body>
+<div class="div-header">
 
-<header>
-    <a href="/" ><input type="button" class="buttons " value="Main page"/></a>
-    <a href="/login" ><input type="button" class="buttons " value="Login"/></a>
-    <a href="/registration" ><input type="button" class="buttons " value="Registration"/></a>
-    <a href="/admin/admin-page" ><input type="button" class="buttons " value="Admin Page"/></a>
-    <a href="/logout-page" ><input type="button" class="buttons " value="User info"/></a>
-
-</header>
+    <th:block th:include="/header"></th:block>
+</div>
 
 <div id="text-change">
     <form action="#" th:action="@{/decode/caesar}" th:object="${operation}" method="POST">
@@ -45,7 +41,7 @@
     el: '#text-change',
     data: {
         question: '',
-        answer: 'Put your text here'
+        answer: 'Enter your text here'
     },
     watch: {
         question: function (newQuestion, oldQuestion) {

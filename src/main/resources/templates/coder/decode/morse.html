@@ -10,15 +10,9 @@
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
 </head>
 <body>
-
-<header>
-    <a href="/" ><input type="button" class="buttons " value="Main page"/></a>
-    <a href="/login" ><input type="button" class="buttons " value="Login"/></a>
-    <a href="/registration" ><input type="button" class="buttons " value="Registration"/></a>
-    <a href="/admin/admin-page" ><input type="button" class="buttons " value="Admin Page"/></a>
-    <a href="/logout-page" ><input type="button" class="buttons " value="User info"/></a>
-
-</header>
+<div class="div-header">
+    <th:block th:include="/header"></th:block>
+</div>
 
 <div id="text-change">
     <form action="#" th:action="@{/decode/morse}" th:object="${operation}" method="POST">
@@ -44,7 +38,7 @@
     el: '#text-change',
     data: {
         question: '',
-        answer: 'Put your text here'
+        answer: 'Enter your text here'
     },
     watch: {
         question: function (newQuestion, oldQuestion) {
