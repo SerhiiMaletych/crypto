@@ -12,10 +12,13 @@
 
 
 </head>
+
+<body>
 <div class="div-header">
 
     <th:block th:include="/header"></th:block>
 </div>
+
 
 <div id="text-change">
     <form action="#" th:action="@{/decode/caesar}" th:object="${operation}" method="POST">
