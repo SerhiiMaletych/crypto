@@ -10,8 +10,14 @@ div {
     border: 1px solid lightgreen;
     margin-top: 10px;
     margin-left: 60px;
-
+    transition: transform .1s;
 }
+
+.button:hover {
+
+    transform: scale(1.2);
+}
+
 
 .user-input {
     height: 25px;

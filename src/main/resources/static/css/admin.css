@@ -9,7 +9,15 @@ div {
     height: 30px;
     border: 1px solid black;
     margin-left: 35px;
+    transition: transform .1s;
 }
+
+.button:hover {
+
+    transform: scale(1.2);
+}
+
+
 
 h3 {
     color: brown;

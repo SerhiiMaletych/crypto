@@ -8,8 +8,14 @@ div {
     height: 40px;
     width: 90px;
     border: 1px solid lightblue;
-
+    transition: transform .5s;
 }
+
+.button:hover {
+
+    transform: scale(1.2);
+}
+
 
 .user-input {
     height: 25px;
@@ -20,5 +26,11 @@ div {
 .sign-in {
     border: 1px solid lightgreen;
 
+    transition: transform .5s;
+}
+
+.sign-in:hover {
+
+    transform: scale(1.2);
 }
 

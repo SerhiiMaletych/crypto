@@ -1,16 +1,20 @@
 .bg_color_lightblue:hover
 {
     background-color:lightblue;
+    transition: 0.5s;
 }
 .bg_color_lightgreen:hover
 {
     background-color:lightgreen;
+    transition: 0.5s;
 }
 .bg_color_red:hover
 {
     background-color:red;
+    transition: 0.5s;
 }
 .bg_color_coral:hover
 {
     background-color:coral;
+    transition: 0.5s;
 }

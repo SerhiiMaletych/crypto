@@ -22,7 +22,13 @@ td{
     width: 150px;
     height: 40px;
     border: 1px solid lightgreen;
+    transition: transform .1s;
 }
+.button:hover {
+
+    transform: scale(1.2);
+}
+
 
 .data {
     border: 1px solid black;
@@ -30,6 +36,10 @@ td{
 .delete {
     width: 100px;
     height: 25px;
-    border: 1px solid red;
+    transition: transform .1s;
+}
+.delete:hover {
+
+    transform: scale(1.2);
 }
 

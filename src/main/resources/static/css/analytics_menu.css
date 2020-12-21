@@ -9,6 +9,12 @@ div {
     width: 220px;
     border: 2px solid lightgreen;
     margin-left: 30px;
+    transition: transform .1s;
+}
+
+.button:hover {
+
+    transform: scale(1.2);
 }
 
 .topText {
@@ -18,4 +24,11 @@ div {
 
 .goToButton {
     border: 2px solid red;
+    transition: transform .1s;
 }
+
+.goToButton:hover {
+
+    transform: scale(1.2);
+}
+

@@ -9,8 +9,14 @@ div {
     width: 120px;
     margin-left: 40px;
     border: 1px solid lightblue;
-
+    transition: transform .1s;
 }
+.button:hover {
+
+    transform: scale(1.2);
+}
+
+
 
 .logout {
     border: 1px solid red;

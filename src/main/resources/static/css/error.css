@@ -9,4 +9,11 @@
     width: 220px;
     border: 2px solid lightgreen;
     margin-left: 20px;
+    transition: transform .1s;
+
+}
+
+.button:hover {
+
+    transform: scale(1.2);
 }

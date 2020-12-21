@@ -2,15 +2,15 @@
     width: 19.6%;
     height: 30px;
     border: 1px solid lightblue;
+    transition: transform .1s;
+
 }
 .buttons:hover {
     background-color: lightblue;
+    transform: scale(1.2);
 }
 
-header {
-    margin-top: 10px;
 
-}
 
 .div-header {
     margin-top: 10px;

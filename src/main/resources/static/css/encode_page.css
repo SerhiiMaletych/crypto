@@ -9,6 +9,10 @@ div {
     height: 30px;
     width: 70px;
     border: 1px solid lightblue;
+    transition: transform .1s;
+}
+.button:hover {
+    transform: scale(1.2);
 
 }
 .do {
@@ -16,6 +20,7 @@ div {
 }
 .do:hover {
     background-color: chartreuse;
+    transform: scale(1.2);
 }
 
 .user-input {
@@ -47,25 +52,31 @@ div {
 .goToButton {
     margin-left: 130px;
     width: 130px;
+    transition: transform .1s;
 
 }
 .goToButton:hover {
     background-color: lightblue;
+    transform: scale(1.2);
 }
 
 .switchButton {
     margin-left: 130px;
     width: 130px;
+    transition: transform .1s;
 
 }
 .switchButton:hover {
     background-color: orange;
+    transform: scale(1.2);
 }
 .clearButton {
     margin-left: 150px;
+    transition: transform .1s;
 }
 .clearButton:hover {
     background-color: yellow;
+    transform: scale(1.2);
 }
 
 .answer {

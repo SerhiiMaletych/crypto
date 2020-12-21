@@ -21,7 +21,14 @@ td{
     width: 150px;
     height: 40px;
     border: 1px solid lightgreen;
+    transition: transform .1s;
 }
+
+.button:hover {
+
+    transform: scale(1.2);
+}
+
 
 .data {
     border: 1px solid black;
@@ -30,4 +37,10 @@ td{
     width: 100px;
     height: 25px;
     border: 1px solid red;
+}
+
+.delete:hover {
+    transition: transform .1s;
+
+    transform: scale(1.2);
 }

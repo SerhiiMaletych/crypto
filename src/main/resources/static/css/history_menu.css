@@ -11,6 +11,12 @@ div {
     margin-left: 30px;
 }
 
+.button:hover {
+
+    transform: scale(1.2);
+}
+
+
 .topText {
     font-size: 33px;
     color: coral;
