@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Last element</title>
+
+    <link rel="stylesheet" type="text/css" href="/css/history.css">
+    <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <link rel="stylesheet" type="text/css" href="/css/change_button_color.css">
+
+
+</head>
+<body>
+
+<div class="div-header">
+    <th:block th:include="/header"></th:block>
+</div>
+
+<div>
+
+
+    <h2 class="history">Last element</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Codec</th>
+            <th>Date</th>
+            <th>Input</th>
+            <th>Translated</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="history : ${lastElement}">
+            <td class="data" th:text="${history.codec}"></td>
+            <td class="data" th:text="${history.date}"></td>
+            <td class="data" th:text="${history.input}"></td>
+            <td class="data " th:text="${history.translated}"></td>
+            <td><a th:href="@{/history-delete/{id}(id=${history.id})}">
+                <input type="button" class="delete bg_color_coral" value="Delete row"/> </a></td>
+
+
+
+        </tr>
+        </tbody>
+    </table>
+    <p><a href="/" ><input type="button" class="button bg_color_lightblue" value="Go to main page"/></a></p>
+
+</div>
+
+
+</body>
+</html>

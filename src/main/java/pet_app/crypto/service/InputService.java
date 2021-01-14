@@ -76,24 +76,6 @@ public class InputService {
         repository.save(input);
     }
 
-//    public void saveEncodeGoogle(Input input) throws IOException, InterruptedException {
-//        LocalDateTime dateTime = LocalDateTime.now();
-//        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
-//        input.setDate(dateTime.format(formatter));
-//        input.setCodec("GOOGLE");
-//        input.setTranslated(googleTranslate.encode(input));
-//        repository.save(input);
-//    }
-//
-//    public void saveDecodeGoogle(Input input) throws IOException, InterruptedException {
-//        LocalDateTime dateTime = LocalDateTime.now();
-//        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
-//        input.setDate(dateTime.format(formatter));
-//        input.setCodec("GOOGLE");
-//        input.setTranslated(googleTranslate.decode(input));
-//        repository.save(input);
-//    }
-
     public void saveEncodeVigenere(Input input) {
         LocalDateTime dateTime = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
@@ -116,7 +98,6 @@ public class InputService {
         LocalDateTime dateTime = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
         input.setDate(dateTime.format(formatter));
-        ;
         input.setCodec("VIGENEREOVERCAESAR");
         input.setTranslated(vigenereOverCaesar.encode(input));
         repository.save(input);

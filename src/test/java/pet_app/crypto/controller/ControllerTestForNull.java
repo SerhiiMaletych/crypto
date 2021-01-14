@@ -34,8 +34,6 @@ public class ControllerTestForNull {
     @Autowired
     AuthController authController;
     @Autowired
-    HistoryRestController historyRestController;
-    @Autowired
     CaesarController caesarController;
     @Autowired
     MorseController morseController;
@@ -72,10 +70,6 @@ public class ControllerTestForNull {
     @Test
     public void auth_controller_not_null() {
         assertThat(authController).isNotNull();
-    }
-    @Test
-    public void history_rest_controller_not_null() {
-        assertThat(historyRestController).isNotNull();
     }
     @Test
     public void caesar_controller_not_null() {
