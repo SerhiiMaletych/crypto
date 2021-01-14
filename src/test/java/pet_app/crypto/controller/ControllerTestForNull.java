@@ -26,7 +26,7 @@ public class ControllerTestForNull {
     @Autowired
     HistoryController historyController;
     @Autowired
-    AnalyticsRestController analyticsController;
+    AnalyticsController analyticsController;
     @Autowired
     RegisterController registerController;
     @Autowired

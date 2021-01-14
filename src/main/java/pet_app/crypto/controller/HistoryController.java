@@ -14,6 +14,7 @@ import java.util.List;
 
 @Controller
 @PreAuthorize("hasAuthority('admin_rights')")
+@RequestMapping("history")
 class HistoryController {
     final InputService service;
     final HistoryRepository repository;
@@ -23,7 +24,7 @@ class HistoryController {
         this.repository = repository;
     }
 
-    @GetMapping("/history/show_all")
+    @GetMapping("/show_all")
     public String findAll(Model model) {
         List<Input> history = service.findAll();
         model.addAttribute("history", history);
@@ -37,12 +38,12 @@ class HistoryController {
 
     }
 
-    @RequestMapping("history/clear_history")
+    @RequestMapping("/clear_history")
     public void clearHistory() {
         repository.clearHistory();
     }
 
-    @GetMapping("history/last_element")
+    @GetMapping("/last_element")
     public String lastAddedElement(Model model) {
         model.addAttribute("lastElement",repository.lastElement());
         return "history/last-element";
