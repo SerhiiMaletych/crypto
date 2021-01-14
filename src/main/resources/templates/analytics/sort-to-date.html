@@ -1,10 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Sort by date</title>
+    <link rel="stylesheet" type="text/css" href="/css/table-page-styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <link rel="stylesheet" type="text/css" href="/css/change_button_color.css">
 </head>
 <body>
+<div class="div-header">
+    <th:block th:include="/header"></th:block>
+</div>
+<div>
 
-</body>
+
+    <h2 class="table-header descending">Sorted by date</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Codec</th>
+            <th>Date</th>
+            <th>Input</th>
+            <th>Translated</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="analytics : ${sortToDate}">
+            <td class="data" th:text="${analytics.codec}"></td>
+            <td class="data" th:text="${analytics.date}"></td>
+            <td class="data" th:text="${analytics.input}"></td>
+            <td class="data " th:text="${analytics.translated}"></td>
+
+
+
+        </tr>
+        </tbody>
+    </table>
+    <p><a href="/" ><input type="button" class="button bg_color_lightblue" value="Go to main page"/></a></p>
+
+</div>
 </html>

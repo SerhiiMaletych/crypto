@@ -1,10 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Most used codec</title>
+    <link rel="stylesheet" type="text/css" href="/css/table-page-styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <link rel="stylesheet" type="text/css" href="/css/change_button_color.css">
 </head>
 <body>
+<div class="div-header">
+    <th:block th:include="/header"></th:block>
+</div>
+<div>
 
+
+    <h2 class="table-header">most used codec</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Codec</th>
+            
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="analytics : ${findMostUsedCodec}">
+            <td class="data" th:text="${analytics.codec}"></td>
+
+
+
+
+        </tr>
+        </tbody>
+    </table>
+    <p><a href="/" ><input type="button" class="button bg_color_lightblue" value="Go to main page"/></a></p>
+
+</div>
 </body>
 </html>

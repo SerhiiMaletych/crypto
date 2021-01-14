@@ -15,6 +15,6 @@ public interface AnalyticsRepository extends JpaRepository<Input, Long> {
     List<Input> descendingInputs();
     @Query(value = "SELECT * FROM input ORDER BY date DESC", nativeQuery = true)
     List<Input> sortToDate();
-    @Query(value ="select distinct count (codec), codec from input group by codec", nativeQuery = true )
+    @Query(value ="SELECT DISTINCT count (codec), codec FROM input GROUP BY codec", nativeQuery = true )
     List<Input> countCodec();
 }

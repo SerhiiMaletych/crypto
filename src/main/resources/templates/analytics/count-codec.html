@@ -26,7 +26,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="analytics : ${descending}">
+        <tr th:each="analytics : ${countCodec}">
             <td class="data" th:text="${analytics.codec}"></td>
             <td class="data" th:text="${analytics.date}"></td>
             <td class="data" th:text="${analytics.input}"></td>
