@@ -11,7 +11,7 @@ import java.util.List;
 public interface AnalyticsRepository extends JpaRepository<Input, Long> {
     @Query(value= "SELECT codec FROM input GROUP BY codec ORDER BY count(*) DESC LIMIT 1", nativeQuery = true)
     List<Input> findMostUsedCodec ();
-    @Query(value ="SELECT input FROM input ORDER BY  input DESC", nativeQuery = true)
+    @Query(value ="SELECT * FROM input ORDER BY  input DESC", nativeQuery = true)
     List<Input> descendingInputs();
     @Query(value = "SELECT * FROM input ORDER BY date DESC", nativeQuery = true)
     List<Input> sortToDate();
