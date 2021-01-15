@@ -5,8 +5,10 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 import pet_app.crypto.model.Input;
 
+
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
+
 
 @Repository
 public interface AnalyticsRepository extends JpaRepository<Input, Long> {
@@ -17,5 +19,5 @@ public interface AnalyticsRepository extends JpaRepository<Input, Long> {
     @Query(value = "SELECT * FROM input ORDER BY date DESC", nativeQuery = true)
     List<Input> sortToDate();
     @Query(value ="SELECT DISTINCT count (codec), codec FROM input GROUP BY codec", nativeQuery = true )
-    List countCodec();
+    List<String> countCodec();
 }

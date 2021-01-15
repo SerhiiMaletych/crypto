@@ -48,18 +48,26 @@ td{
 }
 
 .most-popular-block {
-    width: 230px;
+    width: 250px;
     height: 200px;
     margin-left: 32%;
-    margin-top: 15%;
+    margin-top: 5%;
 }
 
 .most-popular-head {
     font-size: 20px;
+    text-align: center;
 }
 .most-popular-result{
     font-size: 30px;
     color: red;
     text-align: center;
 }
+
+.codec-usage-block {
+    width: 400px;
+    margin-left: 20%;
+}
+
+
 

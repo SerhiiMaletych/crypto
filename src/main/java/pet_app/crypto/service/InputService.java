@@ -89,7 +89,7 @@ public class InputService {
         LocalDateTime dateTime = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
         input.setDate(dateTime.format(formatter));
-        input.setCodec("Vigenere");
+        input.setCodec("VIGENERE");
         input.setTranslated(vigenereCodec.decode(input));
         repository.save(input);
     }

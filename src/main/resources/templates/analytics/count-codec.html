@@ -13,8 +13,10 @@
 </span>
 <div>
 
-            <p class="result" th:text=" ${countCodec}"></p>
-
+    <div class="most-popular-block codec-usage-block">
+        <p class="most-popular-head">Codec occurrences:</p>
+        <p class="most-popular-result" th:text=" ${countCodec}"></p>
+    </div>
 
     <p><a href="/" ><input type="button" class="button bg_color_lightblue" value="Go to main page"/></a></p>
 
