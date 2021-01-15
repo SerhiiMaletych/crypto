@@ -8,30 +8,14 @@
     <link rel="stylesheet" type="text/css" href="/css/change_button_color.css">
 </head>
 <body>
-<div class="div-header">
+<span class="div-header">
     <th:block th:include="/header"></th:block>
-</div>
+</span>
 <div>
-
-
-    <h2 class="table-header">most used codec</h2>
-    <table>
-        <thead>
-        <tr>
-            <th>Codec</th>
-            
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="analytics : ${findMostUsedCodec}">
-            <td class="data" th:text="${analytics.codec}"></td>
-
-
-
-
-        </tr>
-        </tbody>
-    </table>
+<div class="most-popular-block">
+    <p class="most-popular-head">The most popular codec is:</p>
+    <p class="most-popular-result" th:text=" ${findMostUsedCodec}"></p>
+</div>
     <p><a href="/" ><input type="button" class="button bg_color_lightblue" value="Go to main page"/></a></p>
 
 </div>

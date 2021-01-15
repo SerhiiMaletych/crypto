@@ -47,3 +47,19 @@ td{
     margin-left: 350px;
 }
 
+.most-popular-block {
+    width: 230px;
+    height: 200px;
+    margin-left: 32%;
+    margin-top: 15%;
+}
+
+.most-popular-head {
+    font-size: 20px;
+}
+.most-popular-result{
+    font-size: 30px;
+    color: red;
+    text-align: center;
+}
+

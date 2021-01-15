@@ -8,35 +8,14 @@
     <link rel="stylesheet" type="text/css" href="/css/change_button_color.css">
 </head>
 <body>
-<div class="div-header">
+<span class="div-header">
     <th:block th:include="/header"></th:block>
-</div>
+</span>
 <div>
 
-
-    <h2 class="table-header">Count codecs</h2>
-    <table>
-        <thead>
-        <tr>
-            <th>Codec</th>
-            <th>Date</th>
-            <th>Input</th>
-            <th>Translated</th>
-
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="analytics : ${countCodec}">
-            <td class="data" th:text="${analytics.codec}"></td>
-            <td class="data" th:text="${analytics.date}"></td>
-            <td class="data" th:text="${analytics.input}"></td>
-            <td class="data " th:text="${analytics.translated}"></td>
+            <p class="result" th:text=" ${countCodec}"></p>
 
 
-
-        </tr>
-        </tbody>
-    </table>
     <p><a href="/" ><input type="button" class="button bg_color_lightblue" value="Go to main page"/></a></p>
 
 </div>
