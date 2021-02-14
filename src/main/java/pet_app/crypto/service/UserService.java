@@ -30,14 +30,14 @@ public class UserService {
 
     }
 
-    public User saveUser(User users) {
+    public boolean saveUser(User users) {
         users.setPassword(passwordEncoder.encode(users.getPassword()));
         if(users.getRole()!= Role.ADMIN)
             users.setRole(Role.USER);
 
-
         users.setStatus(Status.ACTIVE);
-        return repository.save(users);
+        repository.save(users);
+        return true;
     }
 
     public void deleteById(Long id) {

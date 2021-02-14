@@ -19,7 +19,6 @@ public class User {
     @Column(name = "password")
     private String password;
 
-
     @Size(min = 1, max = 20)
     @Column(name = "first_name", nullable = false)
     private String name;

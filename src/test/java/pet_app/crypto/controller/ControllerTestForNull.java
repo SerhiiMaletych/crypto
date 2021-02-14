@@ -2,8 +2,7 @@ package pet_app.crypto.controller;
 
 import org.junit.jupiter.api.Test;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
+
 import pet_app.crypto.coderService.VigenereOverCaesar;
 import pet_app.crypto.controller.codec.CaesarController;
 import pet_app.crypto.controller.codec.MorseController;
@@ -13,8 +12,10 @@ import pet_app.crypto.controller.security.AuthController;
 import pet_app.crypto.controller.security.RegisterController;
 
 
-import static org.assertj.core.api.Assertions.assertThat;
 
+import static org.assertj.core.api.Assertions.assertThat;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class ControllerTestForNull {
 
