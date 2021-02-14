@@ -2,6 +2,7 @@ package pet_app.crypto.service;
 
 import org.springframework.stereotype.Service;
 import pet_app.crypto.coderService.*;
+import pet_app.crypto.model.Codec;
 import pet_app.crypto.model.Input;
 import pet_app.crypto.repository.InputRepository;
 import java.time.LocalDateTime;
@@ -44,7 +45,7 @@ public class InputService {
         LocalDateTime dateTime = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
         input.setDate(dateTime.format(formatter));
-        input.setCodec("CAESAR");
+        input.setCodec(Codec.CAESAR);
         input.setTranslated(caesarCodec.encode(input));
         repository.save(input);
     }
@@ -53,7 +54,7 @@ public class InputService {
         LocalDateTime dateTime = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
         input.setDate(dateTime.format(formatter));
-        input.setCodec("CAESAR");
+        input.setCodec(Codec.CAESAR);
         input.setTranslated(caesarCodec.decode(input));
         repository.save(input);
     }
@@ -62,7 +63,7 @@ public class InputService {
         LocalDateTime dateTime = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
         input.setDate(dateTime.format(formatter));
-        input.setCodec("MORSE");
+        input.setCodec(Codec.MORSE);
         input.setTranslated(morseCodec.encode(input));
         repository.save(input);
     }
@@ -71,7 +72,7 @@ public class InputService {
         LocalDateTime dateTime = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
         input.setDate(dateTime.format(formatter));
-        input.setCodec("MORSE");
+        input.setCodec(Codec.MORSE);
         input.setTranslated(morseCodec.decode(input));
         repository.save(input);
     }
@@ -80,7 +81,7 @@ public class InputService {
         LocalDateTime dateTime = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
         input.setDate(dateTime.format(formatter));
-        input.setCodec("VIGENERE");
+        input.setCodec(Codec.VIGENERE);
         input.setTranslated(vigenereCodec.encode(input));
         repository.save(input);
     }
@@ -89,7 +90,7 @@ public class InputService {
         LocalDateTime dateTime = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
         input.setDate(dateTime.format(formatter));
-        input.setCodec("VIGENERE");
+        input.setCodec(Codec.VIGENERE);
         input.setTranslated(vigenereCodec.decode(input));
         repository.save(input);
     }
@@ -98,7 +99,7 @@ public class InputService {
         LocalDateTime dateTime = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
         input.setDate(dateTime.format(formatter));
-        input.setCodec("VIGENEREOVERCAESAR");
+        input.setCodec(Codec.VIGENEREOVERCAESAR);
         input.setTranslated(vigenereOverCaesar.encode(input));
         repository.save(input);
     }
@@ -107,7 +108,7 @@ public class InputService {
         LocalDateTime dateTime = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
         input.setDate(dateTime.format(formatter));
-        input.setCodec("VIGENEREOVERCAESAR");
+        input.setCodec(Codec.VIGENEREOVERCAESAR);
         input.setTranslated(vigenereOverCaesar.decode(input));
         repository.save(input);
     }

@@ -17,12 +17,13 @@ public class Input {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String codec;
+    @Enumerated(EnumType.STRING)
+    private Codec codec;
     private String input;
     private String translated;
     private String date;
 
-    public Input(String codec, String input, String translated, Date date) {
+    public Input(Codec codec, String input, String translated, Date date) {
         this.codec = codec;
         this.input = input;
         this.translated = translated;
@@ -35,7 +36,7 @@ public class Input {
     public Input() {
 
     }
-    public Input(long id, String codec, String input, String translated, String date) {
+    public Input(long id, Codec codec, String input, String translated, String date) {
         this.id = id;
         this.codec = codec;
         this.input = input;
@@ -57,11 +58,11 @@ public class Input {
         this.id = id;
     }
 
-    public String getCodec() {
+    public Codec getCodec() {
         return codec;
     }
 
-    public void setCodec(String codec) {
+    public void setCodec(Codec codec) {
         this.codec = codec;
     }
 
