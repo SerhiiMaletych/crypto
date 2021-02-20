@@ -21,7 +21,7 @@ public class UserSaveTest {
 
 
     @Test
-    void addUser() {
+   public void addUser() {
         User user = new User();
         user.setEmail("hello@gmail.com");
         user.setPassword("12345678");
@@ -35,7 +35,7 @@ public class UserSaveTest {
 
 
     @Test
-    void updateUser() {
+    public void updateUser() {
         User user = new User();
         user.setEmail("hello@gmail.com");
         user.setPassword("12345678");

@@ -30,7 +30,7 @@ public class UserDeleteTest {
     UserRepository userRepository;
 
     @Test
-    void deleteUser() {
+    public void deleteUser() {
         User user = new User();
         user.setId(1000L);
         user.setEmail("hello@gmail.com");

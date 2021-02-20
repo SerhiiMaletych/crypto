@@ -29,7 +29,7 @@ public class InputDeleteTest {
     InputRepository inputRepository;
 
     @Test
-    void deleteInput() {
+    public void deleteInput() {
         Input input = new Input();
         input.setInput("hello");
         input.setCodec(Codec.CAESAR);

@@ -30,7 +30,7 @@ public class InputFindAllTest {
     InputRepository inputRepository;
 
     @Test
-    void findAllInputs() {
+    public void findAllInputs() {
         List<Input> inputs = new ArrayList();
         inputs.add(new Input());
         inputs.add(new Input());

@@ -30,7 +30,7 @@ public class UserFindAllTest {
     UserRepository userRepository;
 
     @Test
-    void findAllUsers() {
+    public void findAllUsers() {
         List<User> users = new ArrayList();
         users.add(new User());
         users.add(new User());
