@@ -26,6 +26,7 @@ public class Input {
     private String translated;
     private String date;
 
+
     public Input(Codec codec, String input, String translated, Date date) {
         this.codec = codec;
         this.input = input;
@@ -36,8 +37,6 @@ public class Input {
     public Input(String input) {
         this.input = input;
     }
-
-
 
 
 }
