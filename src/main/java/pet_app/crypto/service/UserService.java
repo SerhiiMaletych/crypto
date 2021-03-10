@@ -32,7 +32,7 @@ public class UserService {
 
     public boolean saveUser(User users) {
         users.setPassword(passwordEncoder.encode(users.getPassword()));
-        if(users.getRole()!= Role.ADMIN)
+        if (users.getRole() != Role.ADMIN)
             users.setRole(Role.USER);
 
         users.setStatus(Status.ACTIVE);

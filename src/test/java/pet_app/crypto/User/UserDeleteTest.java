@@ -33,7 +33,7 @@ public class UserDeleteTest {
     public void deleteUser() {
         User user = new User();
         user.setId(1000L);
-        user.setEmail("hello@gmail.com");
+        user.setEmail("hello1111@gmail.com");
         user.setPassword("12345678");
         user.setStatus(Status.ACTIVE);
         user.setRole(Role.USER);

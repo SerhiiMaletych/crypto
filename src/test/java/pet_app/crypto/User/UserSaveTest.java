@@ -37,7 +37,7 @@ public class UserSaveTest {
     @Test
     public void updateUser() {
         User user = new User();
-        user.setEmail("hello@gmail.com");
+        user.setEmail("hello11@gmail.com");
         user.setPassword("12345678");
         user.setStatus(Status.ACTIVE);
         user.setRole(Role.USER);
